@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_tugas_kelompok_nftmarket/home.dart';
+import 'package:flutter_application_tugas_kelompok_nftmarket/sign_in_phone.dart';
+import 'package:flutter_application_tugas_kelompok_nftmarket/sign_up.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:simple_rich_text/simple_rich_text.dart';
@@ -27,8 +29,14 @@ class _SignInPageState extends State<SignInPage> {
             title: RichText(
                 text: TextSpan(
                     text: 'Sign In',
-                    style: TextStyle(fontSize: 20),
-                    children: const <TextSpan>[TextSpan(text: '\nWelcome')]))),
+                    style: GoogleFonts.chakraPetch(
+                        textStyle: TextStyle(
+                            fontSize: 20, fontWeight: FontWeight.bold)),
+                    children: const <TextSpan>[
+                  TextSpan(
+                      text: '\nHello, Welcome Back !',
+                      style: TextStyle(fontSize: 15, color: Colors.grey))
+                ]))),
         body: SingleChildScrollView(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -47,7 +55,7 @@ class _SignInPageState extends State<SignInPage> {
                 height: 15,
               ),
               buildTextCenter(
-                  name: 'Or',
+                  name: 'or',
                   choose: GoogleFonts.chakraPetch(
                       textStyle: TextStyle(color: Colors.white))),
               SizedBox(
@@ -100,7 +108,8 @@ class _SignInPageState extends State<SignInPage> {
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(15))),
                 onPressed: () {
-                  print("Icon Google");
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (_) => SignInPhonePage()));
                 },
                 child: Text(
                   'Email',
@@ -121,7 +130,8 @@ class _SignInPageState extends State<SignInPage> {
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(15))),
                 onPressed: () {
-                  print("Icon Apple");
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (_) => SignInPhonePage()));
                 },
                 child: Text('Phone',
                     style: GoogleFonts.poppins(
@@ -249,7 +259,7 @@ class _SignInPageState extends State<SignInPage> {
       child: ElevatedButton(
         onPressed: () {},
         child: Text(
-          "Sign Up",
+          "Sign In",
           style: GoogleFonts.poppins(
               textStyle: TextStyle(color: Colors.white),
               shadows: [
@@ -274,7 +284,7 @@ class _SignInPageState extends State<SignInPage> {
       child: ElevatedButton(
         onPressed: () {},
         child: Text(
-          "Sign Up with Google",
+          "Sign In with Google",
           style: GoogleFonts.roboto(
             textStyle: TextStyle(
                 color: Color.fromRGBO(116, 116, 117, 1),
@@ -296,7 +306,7 @@ class _SignInPageState extends State<SignInPage> {
       child: ElevatedButton(
         onPressed: () {},
         child: Text(
-          "Sign Up with Apple",
+          "Sign In with Apple",
           style: GoogleFonts.roboto(
             textStyle:
                 TextStyle(color: Colors.black, fontWeight: FontWeight.bold),
@@ -317,25 +327,24 @@ class _SignInPageState extends State<SignInPage> {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Text(
-            "Not registered yet?",
-            style: TextStyle(
-              fontSize: 16,
-              color: Colors.grey,
-            ),
-          ),
-          SizedBox(
-            width: 8,
-          ),
+          Text("Not registered yet?",
+              style: GoogleFonts.poppins(
+                textStyle: TextStyle(
+                  fontSize: 12,
+                  color: Colors.white,
+                ),
+              )),
           TextButton(
               onPressed: () {
                 Navigator.push(
-                    context, MaterialPageRoute(builder: (_) => Dashboard()));
+                    context, MaterialPageRoute(builder: (_) => SignUpPage()));
               },
               child: Text(
                 "Create An Account",
-                style:
-                    TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
+                style: TextStyle(
+                    color: Colors.orange,
+                    fontWeight: FontWeight.bold,
+                    fontSize: 12),
               ))
         ],
       ),
