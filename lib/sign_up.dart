@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_tugas_kelompok_nftmarket/Dashboard.dart';
+import 'package:flutter_application_tugas_kelompok_nftmarket/dashboard.dart';
 import 'package:flutter_application_tugas_kelompok_nftmarket/sign_in.dart';
 import 'package:flutter_application_tugas_kelompok_nftmarket/sign_up_phone.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';

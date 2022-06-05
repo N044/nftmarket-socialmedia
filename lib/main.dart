@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter_application_tugas_kelompok_nftmarket/Dashboard.dart';
+import 'package:flutter_application_tugas_kelompok_nftmarket/dashboard.dart';
+import 'package:flutter_application_tugas_kelompok_nftmarket/home.dart';
 import 'package:flutter_application_tugas_kelompok_nftmarket/sign_in.dart';
 
 import 'sign_up.dart';
@@ -16,7 +17,7 @@ class MyApp extends StatelessWidget {
       title: 'Material App',
       debugShowCheckedModeBanner: false,
       theme: ThemeData.dark(),
-      home: SignInPage(),
+      home: Home(),
       // routes: <String, WidgetBuilder>{
       //   '/': (context) => HomePage(),
       //   '/second': (context) => SecondApp()
