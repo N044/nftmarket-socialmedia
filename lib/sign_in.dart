@@ -21,10 +21,10 @@ class _SignInPageState extends State<SignInPage> {
     final mq = MediaQuery.of(context).size;
     return SafeArea(
       child: Scaffold(
-        backgroundColor: Colors.black,
+        backgroundColor: Colors.transparent,
         appBar: AppBar(
             toolbarHeight: 100,
-            backgroundColor: Colors.black,
+            backgroundColor: Colors.transparent,
             leading: buildButton(),
             title: RichText(
                 text: TextSpan(
