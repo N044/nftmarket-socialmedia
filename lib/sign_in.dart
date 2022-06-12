@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_tugas_kelompok_nftmarket/dashboard.dart';
+import 'package:flutter_application_tugas_kelompok_nftmarket/home.dart';
 import 'package:flutter_application_tugas_kelompok_nftmarket/sign_in_phone.dart';
 import 'package:flutter_application_tugas_kelompok_nftmarket/sign_up.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -257,7 +258,9 @@ class _SignInPageState extends State<SignInPage> {
     return Padding(
       padding: const EdgeInsets.only(top: 0, left: 30, right: 30),
       child: ElevatedButton(
-        onPressed: () {},
+        onPressed: () {
+          Navigator.push(context, MaterialPageRoute(builder: (_) => Home()));
+        },
         child: Text(
           "Sign In",
           style: GoogleFonts.poppins(
@@ -282,7 +285,9 @@ class _SignInPageState extends State<SignInPage> {
     return Padding(
       padding: const EdgeInsets.only(top: 0, left: 70, right: 30),
       child: ElevatedButton(
-        onPressed: () {},
+        onPressed: () {
+          Navigator.push(context, MaterialPageRoute(builder: (_) => Home()));
+        },
         child: Text(
           "Sign In with Google",
           style: GoogleFonts.roboto(
@@ -304,7 +309,9 @@ class _SignInPageState extends State<SignInPage> {
     return Padding(
       padding: const EdgeInsets.only(top: 0, left: 70, right: 30),
       child: ElevatedButton(
-        onPressed: () {},
+        onPressed: () {
+          Navigator.push(context, MaterialPageRoute(builder: (_) => Home()));
+        },
         child: Text(
           "Sign In with Apple",
           style: GoogleFonts.roboto(

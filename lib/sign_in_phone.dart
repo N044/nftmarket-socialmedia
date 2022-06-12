@@ -258,7 +258,10 @@ class _SignInPhonePageState extends State<SignInPhonePage> {
     return Padding(
       padding: const EdgeInsets.only(top: 0, left: 30, right: 30),
       child: ElevatedButton(
-        onPressed: () {},
+        onPressed: () {
+          Navigator.push(
+              context, MaterialPageRoute(builder: (_) => SignInPage()));
+        },
         child: Text(
           "Request OTP",
           style: GoogleFonts.poppins(

@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
       title: 'Material App',
       debugShowCheckedModeBanner: false,
       theme: ThemeData.dark(),
-      home: Home(),
+      home: Dashboard(),
       // routes: <String, WidgetBuilder>{
       //   '/': (context) => HomePage(),
       //   '/second': (context) => SecondApp()

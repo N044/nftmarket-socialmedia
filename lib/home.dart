@@ -18,54 +18,6 @@ class _HomeState extends State<Home> {
     return SafeArea(
       child: Scaffold(
         backgroundColor: Colors.transparent,
-        appBar: AppBar(
-            toolbarHeight: 100,
-            backgroundColor: Colors.transparent,
-            leadingWidth: 100,
-            titleSpacing: 0.5,
-            leading: Padding(
-              padding: const EdgeInsets.all(20.0),
-              child: Container(
-                decoration: BoxDecoration(
-                  color: Colors.black,
-                  image: const DecorationImage(
-                    image: NetworkImage(
-                        'https://img.freepik.com/free-photo/handsome-confident-smiling-man-with-hands-crossed-chest_176420-18743.jpg?w=2000'),
-                    fit: BoxFit.cover,
-                  ),
-                  border: Border.all(
-                    color: Colors.orange,
-                    width: 3,
-                  ),
-                  borderRadius: BorderRadius.circular(20),
-                ),
-              ),
-            ),
-            actions: <Widget>[
-              IconButton(
-                icon: new Icon(FontAwesomeIcons.bell, color: Colors.white),
-                onPressed: () {},
-              ),
-              Padding(
-                padding: const EdgeInsets.only(right: 30),
-                child: IconButton(
-                  icon: new Icon(FontAwesomeIcons.arrowRightFromBracket,
-                      color: Colors.white),
-                  onPressed: () {},
-                ),
-              ),
-            ],
-            title: RichText(
-                text: TextSpan(
-                    text: 'Good Morning',
-                    style: GoogleFonts.dmSans(
-                        textStyle: const TextStyle(
-                            fontSize: 15, fontWeight: FontWeight.bold)),
-                    children: const <TextSpan>[
-                  TextSpan(
-                      text: '\nJohn F Kenn',
-                      style: TextStyle(fontSize: 20, color: Colors.white))
-                ]))),
         body: PageView(
           controller: pageController,
           //Physics define the nature of pageview
@@ -80,26 +32,30 @@ class _HomeState extends State<Home> {
           child: Padding(
             padding: const EdgeInsets.symmetric(horizontal: 15.0, vertical: 20),
             child: GNav(
-                gap: 8,
+                gap: 10,
                 padding: const EdgeInsets.all(16),
                 tabs: const [
                   GButton(
-                    icon: Icons.home,
+                    icon: FontAwesomeIcons.house,
+                    iconSize: 18,
                     text: 'Home',
                     iconActiveColor: Color.fromRGBO(254, 137, 8, 1),
                   ),
                   GButton(
-                    icon: Icons.account_balance_wallet_outlined,
+                    icon: FontAwesomeIcons.wallet,
+                    iconSize: 18,
                     text: 'Wallet',
                     iconActiveColor: Color.fromRGBO(254, 137, 8, 1),
                   ),
                   GButton(
-                    icon: Icons.search_outlined,
+                    icon: FontAwesomeIcons.magnifyingGlass,
+                    iconSize: 18,
                     text: 'Search',
                     iconActiveColor: Color.fromRGBO(254, 137, 8, 1),
                   ),
                   GButton(
-                    icon: Icons.person_outline_outlined,
+                    icon: FontAwesomeIcons.user,
+                    iconSize: 18,
                     text: 'Profile',
                     iconActiveColor: Color.fromRGBO(254, 137, 8, 1),
                   ),
