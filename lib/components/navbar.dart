@@ -24,7 +24,7 @@ class _HomeState extends State<Home> {
           //Physics define the nature of pageview
           physics: const NeverScrollableScrollPhysics(),
           //Items arranged according to Gnav Button
-          children: [home(context), wallet(), search(), profile()],
+          children: [home(context), wallet(context), search(), profile()],
         ),
         bottomNavigationBar: Container(
           decoration: BoxDecoration(

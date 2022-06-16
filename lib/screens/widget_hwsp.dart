@@ -281,7 +281,7 @@ Widget home(BuildContext context) {
       ));
 }
 
-Widget wallet() {
+Widget wallet(BuildContext context) {
   return SafeArea(
     child: Scaffold(
         backgroundColor: Colors.transparent,
@@ -296,7 +296,9 @@ Widget wallet() {
                     size: 15,
                   ),
                   color: Colors.white,
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.pop(context);
+                  },
                 )),
             title: Text(
               'Wallet',
