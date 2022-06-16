@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
-import 'package:flutter_application_tugas_kelompok_nftmarket/home.dart';
-import 'package:flutter_application_tugas_kelompok_nftmarket/sign_in.dart';
-import 'package:flutter_application_tugas_kelompok_nftmarket/dashboard.dart';
+import 'package:flutter_application_tugas_kelompok_nftmarket/components/navbar.dart';
+import 'package:flutter_application_tugas_kelompok_nftmarket/screens/sign_in.dart';
+import 'package:flutter_application_tugas_kelompok_nftmarket/screens/dashboard.dart';
 
-import 'sign_up.dart';
+import 'screens/sign_up.dart';
 
 void main() => runApp(MyApp());
 
