@@ -301,10 +301,10 @@ Widget wallet() {
             )),
         body: Padding(
           padding: const EdgeInsets.symmetric(
-            horizontal: 15,
+            horizontal: 15.0,
           ),
           child: Padding(
-            padding: const EdgeInsets.only(top: 10),
+            padding: const EdgeInsets.only(top: 2),
             child: Column(
               children: [
                 Text(
@@ -322,7 +322,7 @@ Widget wallet() {
                 Container(
                   margin: EdgeInsets.only(
                     top: 45,
-                    bottom: 10,
+                    bottom: 5,
                   ),
                 ),
                 Padding(
