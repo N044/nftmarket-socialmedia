@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_tugas_kelompok_nftmarket/sign_in.dart';
-import 'sign_up.dart';
 import 'package:google_fonts/google_fonts.dart';
+
+import 'sign_up.dart';
 import 'drawer.dart';
+import 'package:flutter_application_tugas_kelompok_nftmarket/sign_in.dart';
 
 class Dashboard extends StatefulWidget {
   @override

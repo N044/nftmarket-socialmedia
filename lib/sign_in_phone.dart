@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_tugas_kelompok_nftmarket/dashboard.dart';
-import 'package:flutter_application_tugas_kelompok_nftmarket/sign_in.dart';
-import 'package:flutter_application_tugas_kelompok_nftmarket/sign_up.dart';
-import 'package:flutter_application_tugas_kelompok_nftmarket/sign_up_phone.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:simple_rich_text/simple_rich_text.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+
+import 'package:flutter_application_tugas_kelompok_nftmarket/sign_in.dart';
+import 'package:flutter_application_tugas_kelompok_nftmarket/sign_up.dart';
+import 'package:flutter_application_tugas_kelompok_nftmarket/dashboard.dart';
+import 'package:flutter_application_tugas_kelompok_nftmarket/sign_up_phone.dart';
 
 class SignInPhonePage extends StatefulWidget {
   @override
@@ -284,7 +285,7 @@ class _SignInPhonePageState extends State<SignInPhonePage> {
 
   Widget buildCreateanAccountWithGoogle() {
     return Padding(
-      padding: const EdgeInsets.only(top: 0, left: 70, right: 30),
+      padding: const EdgeInsets.only(top: 0, left: 75, right: 30),
       child: ElevatedButton(
         onPressed: () {},
         child: Text(
@@ -306,7 +307,7 @@ class _SignInPhonePageState extends State<SignInPhonePage> {
 
   Widget buildCreateanAccountWithApple() {
     return Padding(
-      padding: const EdgeInsets.only(top: 0, left: 70, right: 30),
+      padding: const EdgeInsets.only(top: 0, left: 75, right: 30),
       child: ElevatedButton(
         onPressed: () {},
         child: Text(
@@ -327,7 +328,7 @@ class _SignInPhonePageState extends State<SignInPhonePage> {
 
   Widget buildTaptoLogin(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(top: 5, left: 10),
+      padding: const EdgeInsets.only(top: 5, left: 20),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
