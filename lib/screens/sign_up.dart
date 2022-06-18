@@ -3,9 +3,11 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:simple_rich_text/simple_rich_text.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
-import 'package:flutter_application_tugas_kelompok_nftmarket/screens/dashboard.dart';
 import 'package:flutter_application_tugas_kelompok_nftmarket/screens/sign_in.dart';
+import 'package:flutter_application_tugas_kelompok_nftmarket/screens/dashboard.dart';
 import 'package:flutter_application_tugas_kelompok_nftmarket/screens/sign_up_phone.dart';
+import 'package:flutter_application_tugas_kelompok_nftmarket/components/tabbar_login.dart';
+import 'package:flutter_application_tugas_kelompok_nftmarket/components/tabbar_daftar.dart';
 
 class SignUpPage extends StatefulWidget {
   @override
@@ -19,29 +21,16 @@ class _SignUpPageState extends State<SignUpPage> {
 
   @override
   Widget build(BuildContext context) {
-    final mq = MediaQuery.of(context).size;
     return SafeArea(
       child: Scaffold(
         backgroundColor: Colors.black,
-        appBar: AppBar(
-          toolbarHeight: 100,
-          backgroundColor: Colors.black,
-          leading: buildButton(),
-          title: Text(
-            "Sign up",
-            style: GoogleFonts.chakraPetch(
-              textStyle: TextStyle(
-                fontSize: 20,
-                fontWeight: FontWeight.bold,
-              ),
-            ),
-          ),
-        ),
         body: SingleChildScrollView(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              buildEmailPhoneFunction(mq),
+              SizedBox(
+                height: 65,
+              ),
               buildEmailField(),
               SizedBox(
                 height: 25,
@@ -99,65 +88,13 @@ class _SignUpPageState extends State<SignUpPage> {
         ));
   }
 
-  Widget buildEmailPhoneFunction(Size mq) {
-    return Padding(
-      padding: const EdgeInsets.only(top: 13, left: 5, right: 3, bottom: 25),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceAround,
-        children: [
-          Padding(
-            padding: const EdgeInsets.all(10.0),
-            child: OutlinedButton(
-                style: OutlinedButton.styleFrom(
-                    side: BorderSide(color: Colors.grey),
-                    backgroundColor: Color.fromRGBO(255, 137, 9, 1),
-                    elevation: 15.0,
-                    minimumSize: Size(mq.width * 0.35, 55),
-                    primary: Colors.white,
-                    shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(15))),
-                onPressed: () {
-                  Navigator.push(
-                      context, MaterialPageRoute(builder: (_) => SignUpPage()));
-                },
-                child: Text(
-                  'Email',
-                  style: GoogleFonts.poppins(
-                      textStyle: TextStyle(color: Colors.white)),
-                )),
-          ),
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: OutlinedButton(
-                style: OutlinedButton.styleFrom(
-                    side: BorderSide(color: Colors.grey),
-                    backgroundColor: Color.fromRGBO(255, 137, 9, 1),
-                    elevation: 15.0,
-                    minimumSize: Size(mq.width * 0.35, 55),
-                    primary: Colors.white,
-                    // backgroundColor: Colors.grey,
-                    shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(15))),
-                onPressed: () {
-                  Navigator.push(context,
-                      MaterialPageRoute(builder: (_) => SignUpPhonePage()));
-                },
-                child: Text('Phone',
-                    style: GoogleFonts.poppins(
-                        textStyle: TextStyle(color: Colors.white)))),
-          ),
-        ],
-      ),
-    );
-  }
-
   Widget buildEmailField() {
     return Padding(
-      padding: const EdgeInsets.only(top: 15, left: 35, right: 35),
+      padding: const EdgeInsets.only(top: 10, left: 45, right: 45),
       child: TextFormField(
         style: GoogleFonts.poppins(
             textStyle: TextStyle(
-          fontSize: 10,
+          fontSize: 15,
           color: Colors.white,
         )),
         keyboardType: TextInputType.emailAddress,
@@ -184,7 +121,7 @@ class _SignUpPageState extends State<SignUpPage> {
 
   Widget buildText({required String name, required TextStyle choose}) {
     return Padding(
-      padding: const EdgeInsets.only(top: 15, left: 45),
+      padding: const EdgeInsets.only(top: 15, left: 55, right: 55),
       child: Text(
         name,
         style: choose,
@@ -204,7 +141,7 @@ class _SignUpPageState extends State<SignUpPage> {
 
   Widget buildCheckBox() {
     return Padding(
-      padding: const EdgeInsets.only(top: 10, left: 25, right: 25),
+      padding: const EdgeInsets.only(top: 10, left: 45, right: 45),
       child: Row(
         children: [
           Checkbox(
@@ -232,11 +169,11 @@ class _SignUpPageState extends State<SignUpPage> {
 
   Widget buildPasswordField() {
     return Padding(
-      padding: const EdgeInsets.only(top: 15, left: 35, right: 35),
+      padding: const EdgeInsets.only(top: 15, left: 45, right: 45),
       child: TextFormField(
         style: GoogleFonts.poppins(
             textStyle: TextStyle(
-          fontSize: 10,
+          fontSize: 15,
           color: Colors.white,
         )),
         keyboardType: TextInputType.emailAddress,
@@ -264,11 +201,11 @@ class _SignUpPageState extends State<SignUpPage> {
 
   Widget buildCreateanAccount() {
     return Padding(
-      padding: const EdgeInsets.only(top: 0, left: 30, right: 30),
+      padding: const EdgeInsets.only(left: 45, right: 45),
       child: ElevatedButton(
         onPressed: () {
           Navigator.push(
-              context, MaterialPageRoute(builder: (_) => SignInPage()));
+              context, MaterialPageRoute(builder: (_) => TabBarPageLogin()));
         },
         child: Text(
           "Sign Up",
@@ -292,9 +229,12 @@ class _SignUpPageState extends State<SignUpPage> {
 
   Widget buildCreateanAccountWithGoogle() {
     return Padding(
-      padding: const EdgeInsets.only(top: 0, left: 75, right: 30),
+      padding: const EdgeInsets.only(left: 95, right: 85),
       child: ElevatedButton(
-        onPressed: () {},
+        onPressed: () {
+          Navigator.push(
+              context, MaterialPageRoute(builder: (_) => TabBarPageLogin()));
+        },
         child: Text(
           "Sign Up with Google",
           style: GoogleFonts.roboto(
@@ -314,9 +254,12 @@ class _SignUpPageState extends State<SignUpPage> {
 
   Widget buildCreateanAccountWithApple() {
     return Padding(
-      padding: const EdgeInsets.only(top: 0, left: 75, right: 30),
+      padding: const EdgeInsets.only(left: 95, right: 85),
       child: ElevatedButton(
-        onPressed: () {},
+        onPressed: () {
+          Navigator.push(
+              context, MaterialPageRoute(builder: (_) => TabBarPageLogin()));
+        },
         child: Text(
           "Sign Up with Apple",
           style: GoogleFonts.roboto(
@@ -350,8 +293,8 @@ class _SignUpPageState extends State<SignUpPage> {
           ),
           TextButton(
               onPressed: () {
-                Navigator.push(
-                    context, MaterialPageRoute(builder: (_) => SignInPage()));
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (_) => TabBarPageLogin()));
               },
               child: Text("Log in",
                   style: GoogleFonts.poppins(

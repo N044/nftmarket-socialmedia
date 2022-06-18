@@ -3,10 +3,13 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:simple_rich_text/simple_rich_text.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
-import 'package:flutter_application_tugas_kelompok_nftmarket/screens/sign_in.dart';
 import 'package:flutter_application_tugas_kelompok_nftmarket/screens/sign_up.dart';
+import 'package:flutter_application_tugas_kelompok_nftmarket/screens/sign_in.dart';
+import 'package:flutter_application_tugas_kelompok_nftmarket/components/navbar.dart';
 import 'package:flutter_application_tugas_kelompok_nftmarket/screens/dashboard.dart';
 import 'package:flutter_application_tugas_kelompok_nftmarket/screens/sign_up_phone.dart';
+import 'package:flutter_application_tugas_kelompok_nftmarket/components/tabbar_login.dart';
+import 'package:flutter_application_tugas_kelompok_nftmarket/components/tabbar_daftar.dart';
 
 class SignInPhonePage extends StatefulWidget {
   @override
@@ -20,30 +23,16 @@ class _SignInPhonePageState extends State<SignInPhonePage> {
 
   @override
   Widget build(BuildContext context) {
-    final mq = MediaQuery.of(context).size;
     return SafeArea(
       child: Scaffold(
         backgroundColor: Colors.black,
-        appBar: AppBar(
-            toolbarHeight: 100,
-            backgroundColor: Colors.black,
-            leading: buildButton(),
-            title: RichText(
-                text: TextSpan(
-                    text: 'Sign In',
-                    style: GoogleFonts.chakraPetch(
-                        textStyle: TextStyle(
-                            fontSize: 20, fontWeight: FontWeight.bold)),
-                    children: const <TextSpan>[
-                  TextSpan(
-                      text: '\nHello, Welcome Back !',
-                      style: TextStyle(fontSize: 15, color: Colors.grey))
-                ]))),
         body: SingleChildScrollView(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              buildEmailPhoneFunction(mq),
+              SizedBox(
+                height: 65,
+              ),
               buildEmailField(),
               SizedBox(
                 height: 25,
@@ -92,65 +81,13 @@ class _SignInPhonePageState extends State<SignInPhonePage> {
         ));
   }
 
-  Widget buildEmailPhoneFunction(Size mq) {
-    return Padding(
-      padding: const EdgeInsets.only(top: 13, left: 5, right: 3, bottom: 25),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceAround,
-        children: [
-          Padding(
-            padding: const EdgeInsets.all(10.0),
-            child: OutlinedButton(
-                style: OutlinedButton.styleFrom(
-                    side: BorderSide(color: Colors.grey),
-                    backgroundColor: Color.fromRGBO(255, 137, 9, 1),
-                    elevation: 15.0,
-                    minimumSize: Size(mq.width * 0.35, 55),
-                    primary: Colors.white,
-                    shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(15))),
-                onPressed: () {
-                  Navigator.push(
-                      context, MaterialPageRoute(builder: (_) => SignInPage()));
-                },
-                child: Text(
-                  'Email',
-                  style: GoogleFonts.poppins(
-                      textStyle: TextStyle(color: Colors.white)),
-                )),
-          ),
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: OutlinedButton(
-                style: OutlinedButton.styleFrom(
-                    side: BorderSide(color: Colors.grey),
-                    backgroundColor: Color.fromRGBO(255, 137, 9, 1),
-                    elevation: 15.0,
-                    minimumSize: Size(mq.width * 0.35, 55),
-                    primary: Colors.white,
-                    // backgroundColor: Colors.grey,
-                    shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(15))),
-                onPressed: () {
-                  Navigator.push(context,
-                      MaterialPageRoute(builder: (_) => SignInPhonePage()));
-                },
-                child: Text('Phone',
-                    style: GoogleFonts.poppins(
-                        textStyle: TextStyle(color: Colors.white)))),
-          ),
-        ],
-      ),
-    );
-  }
-
   Widget buildEmailField() {
     return Padding(
-      padding: const EdgeInsets.only(top: 15, left: 35, right: 35),
+      padding: const EdgeInsets.only(top: 10, left: 45, right: 45),
       child: TextFormField(
         style: GoogleFonts.poppins(
             textStyle: TextStyle(
-          fontSize: 10,
+          fontSize: 15,
           color: Colors.white,
         )),
         keyboardType: TextInputType.emailAddress,
@@ -225,11 +162,11 @@ class _SignInPhonePageState extends State<SignInPhonePage> {
 
   Widget buildPasswordField() {
     return Padding(
-      padding: const EdgeInsets.only(top: 15, left: 35, right: 35),
+      padding: const EdgeInsets.only(top: 10, left: 45, right: 45),
       child: TextFormField(
         style: GoogleFonts.poppins(
             textStyle: TextStyle(
-          fontSize: 10,
+          fontSize: 15,
           color: Colors.white,
         )),
         keyboardType: TextInputType.emailAddress,
@@ -257,11 +194,10 @@ class _SignInPhonePageState extends State<SignInPhonePage> {
 
   Widget buildCreateanAccount() {
     return Padding(
-      padding: const EdgeInsets.only(top: 0, left: 30, right: 30),
+      padding: const EdgeInsets.only(left: 45, right: 45),
       child: ElevatedButton(
         onPressed: () {
-          Navigator.push(
-              context, MaterialPageRoute(builder: (_) => SignInPage()));
+          Navigator.push(context, MaterialPageRoute(builder: (_) => Home()));
         },
         child: Text(
           "Request OTP",
@@ -285,9 +221,11 @@ class _SignInPhonePageState extends State<SignInPhonePage> {
 
   Widget buildCreateanAccountWithGoogle() {
     return Padding(
-      padding: const EdgeInsets.only(top: 0, left: 75, right: 30),
+      padding: const EdgeInsets.only(left: 95, right: 85),
       child: ElevatedButton(
-        onPressed: () {},
+        onPressed: () {
+          Navigator.push(context, MaterialPageRoute(builder: (_) => Home()));
+        },
         child: Text(
           "Sign In with Google",
           style: GoogleFonts.roboto(
@@ -307,9 +245,11 @@ class _SignInPhonePageState extends State<SignInPhonePage> {
 
   Widget buildCreateanAccountWithApple() {
     return Padding(
-      padding: const EdgeInsets.only(top: 0, left: 75, right: 30),
+      padding: const EdgeInsets.only(left: 95, right: 85),
       child: ElevatedButton(
-        onPressed: () {},
+        onPressed: () {
+          Navigator.push(context, MaterialPageRoute(builder: (_) => Home()));
+        },
         child: Text(
           "Sign In with Apple",
           style: GoogleFonts.roboto(
@@ -341,8 +281,8 @@ class _SignInPhonePageState extends State<SignInPhonePage> {
               )),
           TextButton(
               onPressed: () {
-                Navigator.push(context,
-                    MaterialPageRoute(builder: (_) => SignUpPhonePage()));
+                Navigator.push(
+                    context, MaterialPageRoute(builder: (_) => TabBarPage()));
               },
               child: Text(
                 "Create An Account",

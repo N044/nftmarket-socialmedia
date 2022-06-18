@@ -4,6 +4,8 @@ import 'package:google_fonts/google_fonts.dart';
 import 'sign_up.dart';
 import '../components/drawer.dart';
 import 'package:flutter_application_tugas_kelompok_nftmarket/screens/sign_in.dart';
+import 'package:flutter_application_tugas_kelompok_nftmarket/components/tabbar_login.dart';
+import 'package:flutter_application_tugas_kelompok_nftmarket/components/tabbar_daftar.dart';
 
 class Dashboard extends StatefulWidget {
   @override
@@ -82,7 +84,7 @@ class _DashboardState extends State<Dashboard> {
                                     Navigator.push(
                                         context,
                                         MaterialPageRoute(
-                                            builder: (_) => SignUpPage()));
+                                            builder: (_) => TabBarPage()));
                                   },
                                   child: Text(
                                     'Sign Up',
@@ -118,7 +120,7 @@ class _DashboardState extends State<Dashboard> {
                                               context,
                                               MaterialPageRoute(
                                                   builder: (_) =>
-                                                      SignInPage()));
+                                                      TabBarPageLogin()));
                                         },
                                         child: Text(
                                           'Sign In',
