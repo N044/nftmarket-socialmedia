@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-
-import 'package:flutter_application_tugas_kelompok_nftmarket/screens/sign_in.dart';
-import 'package:flutter_application_tugas_kelompok_nftmarket/components/navbar.dart';
 import 'package:flutter_application_tugas_kelompok_nftmarket/screens/dashboard.dart';
+import 'package:flutter_application_tugas_kelompok_nftmarket/screens/notification.dart';
+import 'package:google_nav_bar/google_nav_bar.dart';
 
 Widget home(BuildContext context) {
   return Scaffold(
@@ -33,7 +32,10 @@ Widget home(BuildContext context) {
           actions: <Widget>[
             IconButton(
               icon: new Icon(FontAwesomeIcons.bell, color: Colors.white),
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (_) => NotificationPage()));
+              },
             ),
             Padding(
               padding: const EdgeInsets.only(right: 30),
@@ -808,14 +810,169 @@ Widget search() {
 }
 
 Widget profile() {
-  return Column(
-    mainAxisAlignment: MainAxisAlignment.center,
-    crossAxisAlignment: CrossAxisAlignment.center,
-    children: [
-      Text("This is profile page.",
-          style: GoogleFonts.poppins(
-            fontSize: 26,
-          ))
-    ],
+  return DefaultTabController(
+    length: 3,
+    child: Scaffold(
+      appBar: AppBar(
+        title: const Text('Profile'),
+        backgroundColor: Colors.black,
+        elevation: 0,
+        leading: const Icon(Icons.arrow_back_ios, color: Colors.black),
+        actions: const [
+          Padding(
+            padding: EdgeInsets.only(right: 8.0),
+            child: Icon(Icons.settings_outlined, color: Colors.white),
+          ),
+        ],
+      ),
+      body: Column(
+        children: [
+          // profile photo
+          ClipRRect(
+            borderRadius: const BorderRadius.all(Radius.circular(30.0)),
+            child: Container(
+                height: 100,
+                width: 100,
+                color: Colors.black,
+                child: Image.asset(
+                    'images/handsome-confident-smiling-man-with-hands-crossed-chest_176420-18743.webp')),
+          ),
+          const SizedBox(height: 5),
+          // username
+          const Text('John F Kenn',
+              style: TextStyle(color: Colors.white, fontSize: 20)),
+          const SizedBox(height: 5),
+          const Text('New York USA',
+              style: TextStyle(
+                  color: Color.fromARGB(255, 219, 219, 219), fontSize: 15)),
+          const SizedBox(height: 20),
+          // followers
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Expanded(
+                child: Container(
+                  child: Column(
+                    children: const [
+                      Text(
+                        '10.6K',
+                        style: TextStyle(
+                            color: Colors.white,
+                            fontWeight: FontWeight.bold,
+                            fontSize: 20),
+                      ),
+                      Text(
+                        'Followers',
+                        style: TextStyle(
+                            color: Color.fromARGB(255, 219, 219, 219),
+                            fontSize: 15),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+              Expanded(
+                child: Container(
+                  child: Column(
+                    children: const [
+                      Text(
+                        '2.2K',
+                        style: TextStyle(
+                            color: Colors.white,
+                            fontWeight: FontWeight.bold,
+                            fontSize: 20),
+                      ),
+                      Text(
+                        'Following',
+                        style: TextStyle(
+                            color: Color.fromARGB(255, 219, 219, 219),
+                            fontSize: 15),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+            ],
+          ),
+          const SizedBox(height: 15),
+          // collection
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Expanded(
+                child: Container(
+                  child: Column(
+                    children: const [
+                      Text(
+                        '16',
+                        style: TextStyle(
+                            color: Colors.white,
+                            fontWeight: FontWeight.bold,
+                            fontSize: 20),
+                      ),
+                      Text(
+                        'Collections',
+                        style: TextStyle(
+                            color: Color.fromARGB(255, 219, 219, 219),
+                            fontSize: 15),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+            ],
+          ),
+          const SizedBox(height: 20),
+
+          // card nft
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Container(
+                width: 180,
+                height: 180,
+                padding: new EdgeInsets.all(10.0),
+                child: Card(
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(15.0),
+                  ),
+                  color: Colors.white,
+                  elevation: 10,
+                  child: Column(
+                    mainAxisSize: MainAxisSize.min,
+                    children: const <Widget>[
+                      ListTile(),
+                    ],
+                  ),
+                ),
+              ),
+              Container(
+                width: 180,
+                height: 180,
+                padding: new EdgeInsets.all(10.0),
+                child: Card(
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(15.0),
+                  ),
+                  color: Colors.white,
+                  elevation: 10,
+                  child: Column(
+                    mainAxisSize: MainAxisSize.min,
+                    children: const <Widget>[
+                      ListTile(),
+                    ],
+                  ),
+                ),
+              ),
+            ],
+          ),
+        ],
+      ),
+      bottomNavigationBar: Container(
+        decoration: BoxDecoration(
+            color: const Color.fromRGBO(26, 27, 38, 1),
+            borderRadius: BorderRadius.circular(35)),
+      ),
+    ),
   );
 }

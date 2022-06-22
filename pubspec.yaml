@@ -64,6 +64,16 @@ flutter:
     - images/robot.jpg
     - images/alienboy.png
     - images/profile.jpg
+    - images/avatar1.png
+    - images/avatar2.png
+    - images/avatar3.png
+    - images/avatar4.png
+    - images/avatar5.png
+    - images/nft1.png
+    - images/nft2.png
+    - images/nft3.png
+    - images/nft4.png
+    - images/icon.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.

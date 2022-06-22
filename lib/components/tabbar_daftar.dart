@@ -1,15 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:simple_rich_text/simple_rich_text.dart';
-
-import 'package:flutter_application_tugas_kelompok_nftmarket/screens/sign_up.dart';
-import 'package:flutter_application_tugas_kelompok_nftmarket/screens/sign_in.dart';
-import 'package:flutter_application_tugas_kelompok_nftmarket/screens/dashboard.dart';
-import 'package:flutter_application_tugas_kelompok_nftmarket/screens/sign_up_phone.dart';
-import 'package:flutter_application_tugas_kelompok_nftmarket/screens/sign_in_phone.dart';
+import '../screens/sign_up.dart';
+import '../screens/dashboard.dart';
+import '../screens/sign_up_phone.dart';
 
 class TabBarPage extends StatefulWidget {
-  TabBarPage({Key? key}) : super(key: key);
+  const TabBarPage({Key? key}) : super(key: key);
 
   @override
   State<TabBarPage> createState() => _TabBarPageState();
@@ -29,14 +25,14 @@ class _TabBarPageState extends State<TabBarPage> {
           title: Text(
             "Sign up",
             style: GoogleFonts.chakraPetch(
-              textStyle: TextStyle(
+              textStyle: const TextStyle(
                 fontSize: 20,
                 fontWeight: FontWeight.bold,
               ),
             ),
           ),
           bottom: TabBar(
-              padding: EdgeInsets.only(
+              padding: const EdgeInsets.only(
                 left: 65,
                 right: 65,
               ),
@@ -45,8 +41,8 @@ class _TabBarPageState extends State<TabBarPage> {
                 borderRadius: BorderRadius.circular(15),
               ),
               tabs: [
-                Tab(text: 'Email'),
-                Tab(text: 'Phone'),
+                const Tab(text: 'Email'),
+                const Tab(text: 'Phone'),
               ]),
         ),
         body: TabBarView(children: [
@@ -59,9 +55,9 @@ class _TabBarPageState extends State<TabBarPage> {
 
   Widget buildButton() {
     return Container(
-        padding: EdgeInsets.only(left: 15),
+        padding: const EdgeInsets.only(left: 15),
         child: IconButton(
-          icon: Icon(
+          icon: const Icon(
             Icons.arrow_back_ios,
             size: 15,
           ),
