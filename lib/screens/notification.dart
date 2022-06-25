@@ -13,9 +13,16 @@ class _NotificationPageState extends State<NotificationPage> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
+          toolbarHeight: 100,
+          centerTitle: false,
           backgroundColor: Colors.black,
-          title: const Text(
-            'Notification',
+          title: RichText(
+            text: TextSpan(
+              text: 'Notification',
+              style: GoogleFonts.chakraPetch(
+                textStyle: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+              ),
+            ),
           ),
           leading: IconButton(
             icon: const Icon(Icons.arrow_back_ios),

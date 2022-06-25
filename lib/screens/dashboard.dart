@@ -1,9 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-
-import 'sign_up.dart';
 import '../components/drawer.dart';
-import 'package:flutter_application_tugas_kelompok_nftmarket/screens/sign_in.dart';
 import 'package:flutter_application_tugas_kelompok_nftmarket/components/tabbar_login.dart';
 import 'package:flutter_application_tugas_kelompok_nftmarket/components/tabbar_daftar.dart';
 
@@ -15,7 +12,7 @@ class Dashboard extends StatefulWidget {
 class _DashboardState extends State<Dashboard> {
   TextEditingController pass = TextEditingController();
 
-  bool? _rememberMe = false;
+  // final bool? _rememberMe = false;
 
   @override
   Widget build(BuildContext context) {
@@ -28,11 +25,11 @@ class _DashboardState extends State<Dashboard> {
       body: Stack(
         children: [
           Container(
-            padding: EdgeInsets.only(left: 40, top: 50),
+            padding: const EdgeInsets.only(left: 40, top: 50),
             child: Text(
               'WELC\nOME TO \nMavia \nNFTs \nMarket\nPlace',
               style: GoogleFonts.chakraPetch(
-                textStyle: TextStyle(
+                textStyle: const TextStyle(
                     color: Colors.white,
                     fontSize: 45,
                     height: 1.3,
@@ -42,8 +39,8 @@ class _DashboardState extends State<Dashboard> {
             ),
           ),
           Container(
-            padding: EdgeInsets.only(left: 40, top: 420),
-            child: Text(
+            padding: const EdgeInsets.only(left: 40, top: 420),
+            child: const Text(
               'The biggest n coolest\nNFTs Market Place number\none on the earth.',
               style: TextStyle(
                 color: Colors.grey,
@@ -61,13 +58,13 @@ class _DashboardState extends State<Dashboard> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Container(
-                    margin: EdgeInsets.only(
+                    margin: const EdgeInsets.only(
                       left: 35,
                       right: 35,
                     ),
                     child: Column(
                       children: [
-                        SizedBox(
+                        const SizedBox(
                           height: 190,
                         ),
                         Row(
@@ -77,14 +74,16 @@ class _DashboardState extends State<Dashboard> {
                                 height: 50,
                                 decoration: BoxDecoration(
                                     borderRadius: BorderRadius.circular(15),
-                                    color: Color.fromRGBO(255, 137, 9, 1)),
+                                    color:
+                                        const Color.fromRGBO(255, 137, 9, 1)),
                                 child: Center(
                                     child: TextButton(
                                   onPressed: () {
                                     Navigator.push(
                                         context,
                                         MaterialPageRoute(
-                                            builder: (_) => TabBarPage()));
+                                            builder: (_) =>
+                                                const TabBarPage()));
                                   },
                                   child: Text(
                                     'Sign Up',
@@ -102,7 +101,7 @@ class _DashboardState extends State<Dashboard> {
                                 )),
                               )),
                             ),
-                            SizedBox(
+                            const SizedBox(
                               width: 30,
                             ),
                             Expanded(
@@ -120,7 +119,7 @@ class _DashboardState extends State<Dashboard> {
                                               context,
                                               MaterialPageRoute(
                                                   builder: (_) =>
-                                                      TabBarPageLogin()));
+                                                      const TabBarPageLogin()));
                                         },
                                         child: Text(
                                           'Sign In',
@@ -139,12 +138,12 @@ class _DashboardState extends State<Dashboard> {
                             )
                           ],
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 25,
                         ),
                         Row(
                           mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
+                          children: const [
                             Text(
                               '',
                               style: TextStyle(

@@ -3,7 +3,6 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:flutter_application_tugas_kelompok_nftmarket/screens/dashboard.dart';
 import 'package:flutter_application_tugas_kelompok_nftmarket/screens/notification.dart';
-import 'package:google_nav_bar/google_nav_bar.dart';
 
 Widget home(BuildContext context) {
   return Scaffold(
@@ -31,10 +30,12 @@ Widget home(BuildContext context) {
           ),
           actions: <Widget>[
             IconButton(
-              icon: new Icon(FontAwesomeIcons.bell, color: Colors.white),
+              icon: const Icon(FontAwesomeIcons.bell, color: Colors.white),
               onPressed: () {
-                Navigator.push(context,
-                    MaterialPageRoute(builder: (_) => NotificationPage()));
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (_) => const NotificationPage()));
               },
             ),
             Padding(
@@ -64,7 +65,7 @@ Widget home(BuildContext context) {
       body: SingleChildScrollView(
         scrollDirection: Axis.vertical,
         child: SafeArea(
-          minimum: EdgeInsets.all(48),
+          minimum: const EdgeInsets.all(48),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             mainAxisSize: MainAxisSize.max,
@@ -74,11 +75,11 @@ Widget home(BuildContext context) {
                 children: [
                   ClipRRect(
                     borderRadius: BorderRadius.circular(45),
-                    child: Image(
+                    child: const Image(
                       fit: BoxFit.fill,
                       width: 300,
                       height: 300,
-                      image: AssetImage('images/alienboy.png'),
+                      image: const AssetImage('images/alienboy.png'),
                     ),
                   ),
                   Positioned(
@@ -87,11 +88,11 @@ Widget home(BuildContext context) {
                     left: 10,
                     right: 10,
                     child: Container(
-                      constraints: BoxConstraints(
+                      constraints: const BoxConstraints(
                         maxWidth: double.infinity,
                         maxHeight: double.infinity,
                       ),
-                      padding: EdgeInsets.only(
+                      padding: const EdgeInsets.only(
                         right: 25.0,
                         left: 25.0,
                         top: 15.0,
@@ -105,7 +106,7 @@ Widget home(BuildContext context) {
                               color: Colors.black.withOpacity(0.8),
                               spreadRadius: 2,
                               blurRadius: 5,
-                              offset: Offset(0, 5),
+                              offset: const Offset(0, 5),
                             )
                           ]),
                       child: Column(
@@ -116,7 +117,7 @@ Widget home(BuildContext context) {
                               Text(
                                 'AlienBoy',
                                 style: GoogleFonts.chakraPetch(
-                                  textStyle: TextStyle(
+                                  textStyle: const TextStyle(
                                     color: Colors.white,
                                     fontSize: 15,
                                     fontWeight: FontWeight.bold,
@@ -126,7 +127,7 @@ Widget home(BuildContext context) {
                               Text(
                                 'ETH',
                                 style: GoogleFonts.chakraPetch(
-                                  textStyle: TextStyle(
+                                  textStyle: const TextStyle(
                                       color: Colors.white,
                                       fontSize: 15,
                                       fontWeight: FontWeight.bold),
@@ -140,7 +141,7 @@ Widget home(BuildContext context) {
                               Text(
                                 'Etherium',
                                 style: GoogleFonts.chakraPetch(
-                                  textStyle: TextStyle(
+                                  textStyle: const TextStyle(
                                     color: Colors.white,
                                     fontSize: 15,
                                     fontWeight: FontWeight.bold,
@@ -154,7 +155,7 @@ Widget home(BuildContext context) {
                                     Text(
                                       '0.25',
                                       style: GoogleFonts.chakraPetch(
-                                        textStyle: TextStyle(
+                                        textStyle: const TextStyle(
                                           color: Colors.white,
                                           fontSize: 15,
                                           fontWeight: FontWeight.bold,
@@ -172,18 +173,18 @@ Widget home(BuildContext context) {
                   ),
                 ],
               ),
-              SizedBox(
+              const SizedBox(
                 height: 25,
               ),
               Stack(
                 children: [
                   ClipRRect(
                     borderRadius: BorderRadius.circular(45),
-                    child: Image(
+                    child: const Image(
                       fit: BoxFit.fill,
                       width: 300,
                       height: 300,
-                      image: AssetImage('images/robot.jpg'),
+                      image: const AssetImage('images/robot.jpg'),
                     ),
                   ),
                   Positioned(
@@ -192,11 +193,11 @@ Widget home(BuildContext context) {
                     left: 10,
                     right: 10,
                     child: Container(
-                      constraints: BoxConstraints(
+                      constraints: const BoxConstraints(
                         maxWidth: double.infinity,
                         maxHeight: double.infinity,
                       ),
-                      padding: EdgeInsets.only(
+                      padding: const EdgeInsets.only(
                         right: 25.0,
                         left: 25.0,
                         top: 20.0,
@@ -210,7 +211,7 @@ Widget home(BuildContext context) {
                               color: Colors.black.withOpacity(0.8),
                               spreadRadius: 2,
                               blurRadius: 5,
-                              offset: Offset(0, 5),
+                              offset: const Offset(0, 5),
                             )
                           ]),
                       child: Column(
@@ -221,7 +222,7 @@ Widget home(BuildContext context) {
                               Text(
                                 'Robot',
                                 style: GoogleFonts.chakraPetch(
-                                  textStyle: TextStyle(
+                                  textStyle: const TextStyle(
                                     color: Colors.white,
                                     fontSize: 15,
                                     fontWeight: FontWeight.bold,
@@ -231,7 +232,7 @@ Widget home(BuildContext context) {
                               Text(
                                 'ETH',
                                 style: GoogleFonts.chakraPetch(
-                                  textStyle: TextStyle(
+                                  textStyle: const TextStyle(
                                       color: Colors.white,
                                       fontSize: 15,
                                       fontWeight: FontWeight.bold),
@@ -245,7 +246,7 @@ Widget home(BuildContext context) {
                               Text(
                                 'Etherium',
                                 style: GoogleFonts.chakraPetch(
-                                  textStyle: TextStyle(
+                                  textStyle: const TextStyle(
                                     color: Colors.white,
                                     fontSize: 15,
                                     fontWeight: FontWeight.bold,
@@ -259,7 +260,7 @@ Widget home(BuildContext context) {
                                     Text(
                                       '1.3',
                                       style: GoogleFonts.chakraPetch(
-                                        textStyle: TextStyle(
+                                        textStyle: const TextStyle(
                                           color: Colors.white,
                                           fontSize: 15,
                                           fontWeight: FontWeight.bold,
@@ -288,12 +289,13 @@ Widget wallet(BuildContext context) {
     child: Scaffold(
         backgroundColor: Colors.transparent,
         appBar: AppBar(
+            centerTitle: false,
             toolbarHeight: 100,
             backgroundColor: Colors.transparent,
             leading: Container(
-                padding: EdgeInsets.only(left: 15),
+                padding: const EdgeInsets.only(left: 15),
                 child: IconButton(
-                  icon: Icon(
+                  icon: const Icon(
                     Icons.arrow_back_ios,
                     size: 15,
                   ),
@@ -305,8 +307,8 @@ Widget wallet(BuildContext context) {
             title: Text(
               'Wallet',
               style: GoogleFonts.chakraPetch(
-                  textStyle:
-                      TextStyle(fontSize: 25, fontWeight: FontWeight.bold)),
+                  textStyle: const TextStyle(
+                      fontSize: 25, fontWeight: FontWeight.bold)),
             )),
         body: Padding(
           padding: const EdgeInsets.symmetric(
@@ -319,17 +321,17 @@ Widget wallet(BuildContext context) {
                 Text(
                   'Balance',
                   style: GoogleFonts.chakraPetch(
-                      textStyle:
-                          TextStyle(fontSize: 35, fontWeight: FontWeight.bold)),
+                      textStyle: const TextStyle(
+                          fontSize: 35, fontWeight: FontWeight.bold)),
                 ),
                 Text(
                   'Rp 69.000.000,00',
                   style: GoogleFonts.chakraPetch(
-                      textStyle:
-                          TextStyle(fontSize: 14, fontWeight: FontWeight.bold)),
+                      textStyle: const TextStyle(
+                          fontSize: 14, fontWeight: FontWeight.bold)),
                 ),
                 Container(
-                  margin: EdgeInsets.only(
+                  margin: const EdgeInsets.only(
                     top: 45,
                     bottom: 5,
                   ),
@@ -344,7 +346,7 @@ Widget wallet(BuildContext context) {
                       Text(
                         'Your Portfolio',
                         style: GoogleFonts.chakraPetch(
-                          textStyle: TextStyle(
+                          textStyle: const TextStyle(
                             fontSize: 15,
                             fontWeight: FontWeight.bold,
                           ),
@@ -353,7 +355,7 @@ Widget wallet(BuildContext context) {
                     ],
                   ),
                 ),
-                Padding(
+                const Padding(
                   padding: EdgeInsets.only(
                     top: 20,
                   ),
@@ -364,11 +366,11 @@ Widget wallet(BuildContext context) {
                     top: 10,
                     bottom: 5,
                     child: Container(
-                      constraints: BoxConstraints(
+                      constraints: const BoxConstraints(
                         maxWidth: double.infinity,
                         maxHeight: double.infinity,
                       ),
-                      padding: EdgeInsets.only(
+                      padding: const EdgeInsets.only(
                         right: 40.0,
                         left: 40.0,
                         top: 10.0,
@@ -382,7 +384,7 @@ Widget wallet(BuildContext context) {
                               color: Colors.black.withOpacity(0.8),
                               spreadRadius: 2,
                               blurRadius: 5,
-                              offset: Offset(0, 5),
+                              offset: const Offset(0, 5),
                             )
                           ]),
                       child: Column(
@@ -393,7 +395,7 @@ Widget wallet(BuildContext context) {
                               Text(
                                 'Bitcoin',
                                 style: GoogleFonts.chakraPetch(
-                                  textStyle: TextStyle(
+                                  textStyle: const TextStyle(
                                     color: Colors.white,
                                     fontSize: 15,
                                     fontWeight: FontWeight.normal,
@@ -403,7 +405,7 @@ Widget wallet(BuildContext context) {
                               Text(
                                 'Rp 35.500.000,00',
                                 style: GoogleFonts.chakraPetch(
-                                  textStyle: TextStyle(
+                                  textStyle: const TextStyle(
                                       color: Colors.white,
                                       fontSize: 15,
                                       fontWeight: FontWeight.normal),
@@ -417,7 +419,7 @@ Widget wallet(BuildContext context) {
                               Text(
                                 'BTC',
                                 style: GoogleFonts.chakraPetch(
-                                  textStyle: TextStyle(
+                                  textStyle: const TextStyle(
                                     color: Colors.grey,
                                     fontSize: 15,
                                     fontWeight: FontWeight.normal,
@@ -431,7 +433,7 @@ Widget wallet(BuildContext context) {
                                     Text(
                                       '+69.00%',
                                       style: GoogleFonts.chakraPetch(
-                                        textStyle: TextStyle(
+                                        textStyle: const TextStyle(
                                           color: Colors.green,
                                           fontSize: 15,
                                           fontWeight: FontWeight.normal,
@@ -448,7 +450,7 @@ Widget wallet(BuildContext context) {
                     ),
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 20,
                 ),
                 Padding(
@@ -457,11 +459,11 @@ Widget wallet(BuildContext context) {
                     top: 10,
                     bottom: 5,
                     child: Container(
-                      constraints: BoxConstraints(
+                      constraints: const BoxConstraints(
                         maxWidth: double.infinity,
                         maxHeight: double.infinity,
                       ),
-                      padding: EdgeInsets.only(
+                      padding: const EdgeInsets.only(
                         right: 40.0,
                         left: 40.0,
                         top: 12.0,
@@ -475,7 +477,7 @@ Widget wallet(BuildContext context) {
                               color: Colors.black.withOpacity(0.8),
                               spreadRadius: 2,
                               blurRadius: 5,
-                              offset: Offset(0, 5),
+                              offset: const Offset(0, 5),
                             )
                           ]),
                       child: Column(
@@ -486,7 +488,7 @@ Widget wallet(BuildContext context) {
                               Text(
                                 'Ethereum',
                                 style: GoogleFonts.chakraPetch(
-                                  textStyle: TextStyle(
+                                  textStyle: const TextStyle(
                                     color: Colors.white,
                                     fontSize: 15,
                                     fontWeight: FontWeight.normal,
@@ -496,7 +498,7 @@ Widget wallet(BuildContext context) {
                               Text(
                                 'Rp 17.250.000,00',
                                 style: GoogleFonts.chakraPetch(
-                                  textStyle: TextStyle(
+                                  textStyle: const TextStyle(
                                       color: Colors.white,
                                       fontSize: 15,
                                       fontWeight: FontWeight.normal),
@@ -510,7 +512,7 @@ Widget wallet(BuildContext context) {
                               Text(
                                 'ETH',
                                 style: GoogleFonts.chakraPetch(
-                                  textStyle: TextStyle(
+                                  textStyle: const TextStyle(
                                     color: Colors.grey,
                                     fontSize: 15,
                                     fontWeight: FontWeight.normal,
@@ -524,7 +526,7 @@ Widget wallet(BuildContext context) {
                                     Text(
                                       '+9.77%',
                                       style: GoogleFonts.chakraPetch(
-                                        textStyle: TextStyle(
+                                        textStyle: const TextStyle(
                                           color: Colors.green,
                                           fontSize: 15,
                                           fontWeight: FontWeight.normal,
@@ -541,7 +543,7 @@ Widget wallet(BuildContext context) {
                     ),
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 20,
                 ),
                 Padding(
@@ -550,11 +552,11 @@ Widget wallet(BuildContext context) {
                     top: 100,
                     bottom: 5,
                     child: Container(
-                      constraints: BoxConstraints(
+                      constraints: const BoxConstraints(
                         maxWidth: double.infinity,
                         maxHeight: double.infinity,
                       ),
-                      padding: EdgeInsets.only(
+                      padding: const EdgeInsets.only(
                         right: 40.0,
                         left: 40.0,
                         top: 12.0,
@@ -568,7 +570,7 @@ Widget wallet(BuildContext context) {
                               color: Colors.black.withOpacity(0.8),
                               spreadRadius: 2,
                               blurRadius: 5,
-                              offset: Offset(0, 5),
+                              offset: const Offset(0, 5),
                             )
                           ]),
                       child: Column(
@@ -579,7 +581,7 @@ Widget wallet(BuildContext context) {
                               Text(
                                 'Cardano',
                                 style: GoogleFonts.chakraPetch(
-                                  textStyle: TextStyle(
+                                  textStyle: const TextStyle(
                                     color: Colors.white,
                                     fontSize: 15,
                                     fontWeight: FontWeight.normal,
@@ -589,7 +591,7 @@ Widget wallet(BuildContext context) {
                               Text(
                                 'Rp 9.000.000,00',
                                 style: GoogleFonts.chakraPetch(
-                                  textStyle: TextStyle(
+                                  textStyle: const TextStyle(
                                       color: Colors.white,
                                       fontSize: 15,
                                       fontWeight: FontWeight.normal),
@@ -603,7 +605,7 @@ Widget wallet(BuildContext context) {
                               Text(
                                 'ADA',
                                 style: GoogleFonts.chakraPetch(
-                                  textStyle: TextStyle(
+                                  textStyle: const TextStyle(
                                     color: Colors.grey,
                                     fontSize: 15,
                                     fontWeight: FontWeight.normal,
@@ -617,7 +619,7 @@ Widget wallet(BuildContext context) {
                                     Text(
                                       '-22.97%',
                                       style: GoogleFonts.chakraPetch(
-                                        textStyle: TextStyle(
+                                        textStyle: const TextStyle(
                                           color: Colors.red,
                                           fontSize: 15,
                                           fontWeight: FontWeight.normal,
@@ -634,7 +636,7 @@ Widget wallet(BuildContext context) {
                     ),
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 20,
                 ),
                 Padding(
@@ -643,11 +645,11 @@ Widget wallet(BuildContext context) {
                     top: 100,
                     bottom: 5,
                     child: Container(
-                      constraints: BoxConstraints(
+                      constraints: const BoxConstraints(
                         maxWidth: double.infinity,
                         maxHeight: double.infinity,
                       ),
-                      padding: EdgeInsets.only(
+                      padding: const EdgeInsets.only(
                         right: 40.0,
                         left: 40.0,
                         top: 12.0,
@@ -661,7 +663,7 @@ Widget wallet(BuildContext context) {
                               color: Colors.black.withOpacity(0.8),
                               spreadRadius: 2,
                               blurRadius: 5,
-                              offset: Offset(0, 5),
+                              offset: const Offset(0, 5),
                             )
                           ]),
                       child: Column(
@@ -672,7 +674,7 @@ Widget wallet(BuildContext context) {
                               Text(
                                 'Dogecoin',
                                 style: GoogleFonts.chakraPetch(
-                                  textStyle: TextStyle(
+                                  textStyle: const TextStyle(
                                     color: Colors.white,
                                     fontSize: 15,
                                     fontWeight: FontWeight.normal,
@@ -682,7 +684,7 @@ Widget wallet(BuildContext context) {
                               Text(
                                 'Rp 7.250.000,00',
                                 style: GoogleFonts.chakraPetch(
-                                  textStyle: TextStyle(
+                                  textStyle: const TextStyle(
                                       color: Colors.white,
                                       fontSize: 15,
                                       fontWeight: FontWeight.normal),
@@ -696,7 +698,7 @@ Widget wallet(BuildContext context) {
                               Text(
                                 'DOGE',
                                 style: GoogleFonts.chakraPetch(
-                                  textStyle: TextStyle(
+                                  textStyle: const TextStyle(
                                     color: Colors.grey,
                                     fontSize: 15,
                                     fontWeight: FontWeight.normal,
@@ -710,7 +712,7 @@ Widget wallet(BuildContext context) {
                                     Text(
                                       '-16.58%',
                                       style: GoogleFonts.chakraPetch(
-                                        textStyle: TextStyle(
+                                        textStyle: const TextStyle(
                                           color: Colors.red,
                                           fontSize: 15,
                                           fontWeight: FontWeight.normal,
@@ -736,7 +738,7 @@ Widget wallet(BuildContext context) {
                           height: 50,
                           decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(15),
-                              color: Color.fromRGBO(255, 137, 9, 1)),
+                              color: const Color.fromRGBO(255, 137, 9, 1)),
                           child: Center(
                               child: TextButton(
                             onPressed: () {},
@@ -756,7 +758,7 @@ Widget wallet(BuildContext context) {
                           )),
                         )),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         width: 30,
                       ),
                       Expanded(
@@ -947,31 +949,27 @@ Widget profile() {
                 ),
               ),
               Container(
-                width: 180,
-                height: 180,
-                padding: new EdgeInsets.all(10.0),
-                child: Card(
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(15.0),
-                  ),
-                  color: Colors.white,
-                  elevation: 10,
-                  child: Column(
-                    mainAxisSize: MainAxisSize.min,
-                    children: const <Widget>[
-                      ListTile(),
+                  width: 180,
+                  height: 180,
+                  padding: const EdgeInsets.all(10.0),
+                  child: SingleChildScrollView(
+                      child: Column(
+                    children: [
+                      Card(
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(15.0),
+                        ),
+                        color: Colors.white,
+                        elevation: 10,
+                        child: Column(
+                          mainAxisSize: MainAxisSize.min,
+                        ),
+                      ),
                     ],
-                  ),
-                ),
-              ),
+                  ))),
             ],
           ),
         ],
-      ),
-      bottomNavigationBar: Container(
-        decoration: BoxDecoration(
-            color: const Color.fromRGBO(26, 27, 38, 1),
-            borderRadius: BorderRadius.circular(35)),
       ),
     ),
   );
