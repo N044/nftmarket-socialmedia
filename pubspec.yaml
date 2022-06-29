@@ -64,6 +64,7 @@ flutter:
     - images/robot.jpg
     - images/alienboy.png
     - images/profile.jpg
+    - images/profile.png
     - images/avatar1.png
     - images/avatar2.png
     - images/avatar3.png
@@ -73,6 +74,22 @@ flutter:
     - images/nft2.png
     - images/nft3.png
     - images/nft4.png
+    - images/nft5.png
+    - images/nft6.png
+    - images/nft7.png
+    - images/nft8.png
+    - images/nft9.png
+    - images/nft10.png
+    - images/nft11.png
+    - images/nft12.png
+    - images/nft13.png
+    - images/nft14.png
+    - images/nft15.png
+    - images/nft16.png
+    - images/nft17.png
+    - images/nft18.png
+    - images/nft19.png
+    - images/nft20.png
     - images/icon.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
