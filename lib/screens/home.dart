@@ -1050,6 +1050,7 @@ Widget profile() {
     length: 3,
     child: Scaffold(
         appBar: AppBar(
+          toolbarHeight: 100,
           centerTitle: false,
           title: RichText(
             text: TextSpan(
@@ -1214,7 +1215,7 @@ Widget profile() {
                 children: [
                   Container(
                     width: 180,
-                    height: 180,
+                    height: 160,
                     padding: new EdgeInsets.all(10.0),
                     child: ClipRRect(
                       borderRadius: BorderRadius.circular(15.0),
@@ -1226,7 +1227,7 @@ Widget profile() {
                   ),
                   Container(
                     width: 180,
-                    height: 180,
+                    height: 160,
                     padding: new EdgeInsets.all(10.0),
                     child: ClipRRect(
                       borderRadius: BorderRadius.circular(15.0),
@@ -1243,7 +1244,7 @@ Widget profile() {
                 children: [
                   Container(
                     width: 180,
-                    height: 180,
+                    height: 160,
                     padding: new EdgeInsets.all(10.0),
                     child: ClipRRect(
                       borderRadius: BorderRadius.circular(15.0),
@@ -1255,7 +1256,7 @@ Widget profile() {
                   ),
                   Container(
                     width: 180,
-                    height: 180,
+                    height: 160,
                     padding: new EdgeInsets.all(10.0),
                     child: ClipRRect(
                       borderRadius: BorderRadius.circular(15.0),
@@ -1272,7 +1273,7 @@ Widget profile() {
                 children: [
                   Container(
                     width: 180,
-                    height: 180,
+                    height: 160,
                     padding: new EdgeInsets.all(10.0),
                     child: ClipRRect(
                       borderRadius: BorderRadius.circular(15.0),
@@ -1284,7 +1285,7 @@ Widget profile() {
                   ),
                   Container(
                     width: 180,
-                    height: 180,
+                    height: 160,
                     padding: new EdgeInsets.all(10.0),
                     child: ClipRRect(
                       borderRadius: BorderRadius.circular(15.0),
@@ -1301,7 +1302,7 @@ Widget profile() {
                 children: [
                   Container(
                     width: 180,
-                    height: 180,
+                    height: 160,
                     padding: new EdgeInsets.all(10.0),
                     child: ClipRRect(
                       borderRadius: BorderRadius.circular(15.0),
@@ -1313,7 +1314,7 @@ Widget profile() {
                   ),
                   Container(
                     width: 180,
-                    height: 180,
+                    height: 160,
                     padding: new EdgeInsets.all(10.0),
                     child: ClipRRect(
                       borderRadius: BorderRadius.circular(15.0),
@@ -1330,7 +1331,7 @@ Widget profile() {
                 children: [
                   Container(
                     width: 180,
-                    height: 180,
+                    height: 160,
                     padding: new EdgeInsets.all(10.0),
                     child: ClipRRect(
                       borderRadius: BorderRadius.circular(15.0),
@@ -1342,7 +1343,7 @@ Widget profile() {
                   ),
                   Container(
                     width: 180,
-                    height: 180,
+                    height: 160,
                     padding: new EdgeInsets.all(10.0),
                     child: ClipRRect(
                       borderRadius: BorderRadius.circular(15.0),
@@ -1359,7 +1360,7 @@ Widget profile() {
                 children: [
                   Container(
                     width: 180,
-                    height: 180,
+                    height: 160,
                     padding: new EdgeInsets.all(10.0),
                     child: ClipRRect(
                       borderRadius: BorderRadius.circular(15.0),
@@ -1371,7 +1372,7 @@ Widget profile() {
                   ),
                   Container(
                     width: 180,
-                    height: 180,
+                    height: 160,
                     padding: new EdgeInsets.all(10.0),
                     child: ClipRRect(
                       borderRadius: BorderRadius.circular(15.0),
@@ -1388,7 +1389,7 @@ Widget profile() {
                 children: [
                   Container(
                     width: 180,
-                    height: 180,
+                    height: 160,
                     padding: new EdgeInsets.all(10.0),
                     child: ClipRRect(
                       borderRadius: BorderRadius.circular(30.0),
@@ -1400,7 +1401,7 @@ Widget profile() {
                   ),
                   Container(
                     width: 180,
-                    height: 180,
+                    height: 160,
                     padding: new EdgeInsets.all(10.0),
                     child: ClipRRect(
                       borderRadius: BorderRadius.circular(151.0),
@@ -1417,7 +1418,7 @@ Widget profile() {
                 children: [
                   Container(
                     width: 180,
-                    height: 180,
+                    height: 160,
                     padding: new EdgeInsets.all(10.0),
                     child: ClipRRect(
                       borderRadius: BorderRadius.circular(15.0),
@@ -1429,7 +1430,7 @@ Widget profile() {
                   ),
                   Container(
                     width: 180,
-                    height: 180,
+                    height: 160,
                     padding: new EdgeInsets.all(10.0),
                     child: ClipRRect(
                       borderRadius: BorderRadius.circular(15.0),
