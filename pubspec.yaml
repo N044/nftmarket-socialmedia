@@ -90,6 +90,8 @@ flutter:
     - images/nft18.png
     - images/nft19.png
     - images/nft20.png
+    - images/nft21.png
+    - images/nft22.png
     - images/icon.png
 
   # An image asset can refer to one or more resolution-specific "variants", see

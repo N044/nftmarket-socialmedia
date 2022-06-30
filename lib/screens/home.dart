@@ -79,7 +79,7 @@ Widget home(BuildContext context) {
                       fit: BoxFit.fill,
                       width: 300,
                       height: 300,
-                      image: const AssetImage('images/alienboy.png'),
+                      image: AssetImage('images/alienboy.png'),
                     ),
                   ),
                   Positioned(
@@ -184,7 +184,7 @@ Widget home(BuildContext context) {
                       fit: BoxFit.fill,
                       width: 300,
                       height: 300,
-                      image: const AssetImage('images/robot.jpg'),
+                      image: AssetImage('images/robot.jpg'),
                     ),
                   ),
                   Positioned(
@@ -799,15 +799,249 @@ Widget wallet(BuildContext context) {
 }
 
 Widget search() {
-  return Column(
-    mainAxisAlignment: MainAxisAlignment.center,
-    crossAxisAlignment: CrossAxisAlignment.center,
-    children: [
-      Text("This is search Part Page.",
-          style: GoogleFonts.poppins(
-            fontSize: 26,
-          ))
-    ],
+  return Scaffold(
+    appBar: AppBar(
+      toolbarHeight: 100,
+      centerTitle: false,
+      backgroundColor: Colors.black,
+      title: RichText(
+        text: TextSpan(
+          text: 'Search',
+          style: GoogleFonts.chakraPetch(
+            textStyle:
+                const TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+          ),
+        ),
+      ),
+      leading: const Icon(Icons.arrow_back_ios, color: Colors.white),
+    ),
+    body: Column(
+      children: [
+        Container(
+          height: 40,
+          color: Colors.black,
+        ),
+        Container(
+          height: 615,
+          color: Colors.black,
+          child: Column(children: [
+            SizedBox(
+              width: 330,
+              child: TextField(
+                  style: GoogleFonts.chakraPetch(
+                    textStyle:
+                        const TextStyle(fontSize: 14, color: Colors.white),
+                  ),
+                  decoration: InputDecoration(
+                      hintStyle: const TextStyle(color: Colors.white),
+                      filled: true,
+                      fillColor: const Color.fromRGBO(26, 27, 38, 1),
+                      contentPadding:
+                          const EdgeInsets.fromLTRB(20.0, 20.0, 20.0, 20.0),
+                      suffixIcon: const Icon(
+                        Icons.search_rounded,
+                        color: Colors.white,
+                      ),
+                      hintText: "Search NFT's....",
+                      enabledBorder: OutlineInputBorder(
+                          borderSide: const BorderSide(
+                              color: Color.fromRGBO(26, 27, 38, 1)),
+                          borderRadius: BorderRadius.circular(15.0)),
+                      border: OutlineInputBorder(
+                          borderSide: const BorderSide(
+                              color: Color.fromRGBO(26, 27, 38, 1)),
+                          borderRadius: BorderRadius.circular(15.0)),
+                      focusedBorder: OutlineInputBorder(
+                          borderSide: const BorderSide(
+                              color: Color.fromRGBO(26, 27, 38, 1)),
+                          borderRadius: BorderRadius.circular(15.0)))),
+            ),
+
+            const SizedBox(
+              height: 20,
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text(
+                  'Trending',
+                  style: GoogleFonts.dmSans(
+                      textStyle: const TextStyle(
+                    fontSize: 16,
+                    fontWeight: FontWeight.normal,
+                    color: Colors.white,
+                  )),
+                ),
+                const SizedBox(
+                  width: 10,
+                ),
+                Container(
+                    width: 1,
+                    height: 15,
+                    decoration: const BoxDecoration(color: Colors.white)),
+                const SizedBox(
+                  width: 10,
+                ),
+                Text(
+                  'Art',
+                  style: GoogleFonts.chakraPetch(
+                      textStyle: const TextStyle(
+                    fontSize: 16,
+                    fontWeight: FontWeight.normal,
+                    color: Colors.white,
+                  )),
+                ),
+                const SizedBox(
+                  width: 10,
+                ),
+                Container(
+                    width: 1,
+                    height: 15,
+                    decoration: const BoxDecoration(color: Colors.white)),
+                const SizedBox(
+                  width: 10,
+                ),
+                Text(
+                  'Virtual Worlds',
+                  style: GoogleFonts.chakraPetch(
+                      textStyle: const TextStyle(
+                    fontSize: 16,
+                    fontWeight: FontWeight.normal,
+                    color: Colors.white,
+                  )),
+                ),
+              ],
+            ),
+
+            const SizedBox(
+              height: 30,
+            ),
+
+            //CARD
+            Stack(alignment: Alignment.bottomCenter, children: <Widget>[
+              Card(
+                color: Colors.black,
+                child: Container(
+                  width: 330,
+                  height: 200,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(20),
+                    image: const DecorationImage(
+                      image: AssetImage("images/nft21.png"),
+                      fit: BoxFit.cover,
+                      alignment: Alignment.topCenter,
+                    ),
+                  ),
+                ),
+              ),
+              Container(
+                width: 330,
+                height: 80,
+                decoration: const BoxDecoration(
+                    color: Color.fromRGBO(26, 27, 38, 1),
+                    borderRadius: BorderRadius.only(
+                        bottomLeft: Radius.circular(20),
+                        bottomRight: Radius.circular(20))),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text(
+                      'NFT WORLDS',
+                      style: GoogleFonts.chakraPetch(
+                          textStyle: const TextStyle(
+                        fontSize: 25,
+                        fontWeight: FontWeight.normal,
+                        color: Colors.white,
+                      )),
+                    ),
+                    Text(
+                      'Created by',
+                      style: GoogleFonts.chakraPetch(
+                          textStyle: const TextStyle(
+                        fontSize: 12,
+                        fontWeight: FontWeight.normal,
+                        color: Colors.white,
+                      )),
+                    ),
+                    Text(
+                      'NFTWorldsVault',
+                      style: GoogleFonts.chakraPetch(
+                          textStyle: const TextStyle(
+                        fontSize: 12,
+                        fontWeight: FontWeight.normal,
+                        color: Colors.white,
+                      )),
+                    ),
+                  ],
+                ),
+              )
+            ]),
+            const SizedBox(
+              height: 40,
+            ),
+
+            Stack(alignment: Alignment.bottomCenter, children: <Widget>[
+              Card(
+                color: Colors.black,
+                child: Container(
+                  width: 330,
+                  height: 200,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(20),
+                    image: const DecorationImage(
+                      image: AssetImage("images/nft22.png"),
+                      fit: BoxFit.cover,
+                      alignment: Alignment.topCenter,
+                    ),
+                  ),
+                ),
+              ),
+              Container(
+                width: 330,
+                height: 80,
+                decoration: const BoxDecoration(
+                    color: Color.fromRGBO(26, 27, 38, 1),
+                    borderRadius: BorderRadius.only(
+                        bottomLeft: Radius.circular(20),
+                        bottomRight: Radius.circular(20))),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text(
+                      'Chromie Squiggle',
+                      style: GoogleFonts.chakraPetch(
+                          textStyle: const TextStyle(
+                        fontSize: 25,
+                        fontWeight: FontWeight.normal,
+                        color: Colors.white,
+                      )),
+                    ),
+                    Text(
+                      'Created by',
+                      style: GoogleFonts.chakraPetch(
+                          textStyle: const TextStyle(
+                        fontSize: 12,
+                        fontWeight: FontWeight.normal,
+                        color: Colors.white,
+                      )),
+                    ),
+                    Text(
+                      'ArtBlocks_Admin',
+                      style: GoogleFonts.chakraPetch(
+                          textStyle: const TextStyle(
+                        fontSize: 12,
+                        fontWeight: FontWeight.normal,
+                        color: Colors.white,
+                      )),
+                    ),
+                  ],
+                ),
+              )
+            ])
+          ]),
+        ),
+      ],
+    ),
   );
 }
 
