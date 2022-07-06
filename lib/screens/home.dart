@@ -292,7 +292,7 @@ Widget wallet(BuildContext context) {
         backgroundColor: Colors.transparent,
         appBar: AppBar(
             centerTitle: false,
-            toolbarHeight: 100,
+            toolbarHeight: 80,
             backgroundColor: Colors.transparent,
             leading: Container(
                 padding: const EdgeInsets.only(left: 15),
@@ -312,491 +312,488 @@ Widget wallet(BuildContext context) {
                   textStyle: const TextStyle(
                       fontSize: 25, fontWeight: FontWeight.bold)),
             )),
-        body: SingleChildScrollView(
+        body: Padding(
+          padding: const EdgeInsets.symmetric(
+            horizontal: 15.0,
+          ),
           child: Padding(
-            padding: const EdgeInsets.symmetric(
-              horizontal: 15.0,
-            ),
-            child: Padding(
-              padding: const EdgeInsets.only(top: 2),
-              child: Column(
-                children: [
-                  Text(
-                    'Balance',
-                    style: GoogleFonts.chakraPetch(
-                        textStyle: const TextStyle(
-                            fontSize: 35, fontWeight: FontWeight.bold)),
+            padding: const EdgeInsets.only(top: 2),
+            child: Column(
+              children: [
+                Text(
+                  'Balance',
+                  style: GoogleFonts.chakraPetch(
+                      textStyle: const TextStyle(
+                          fontSize: 35, fontWeight: FontWeight.bold)),
+                ),
+                Text(
+                  'Rp 69.000.000,00',
+                  style: GoogleFonts.chakraPetch(
+                      textStyle: const TextStyle(
+                          fontSize: 14, fontWeight: FontWeight.bold)),
+                ),
+                Container(
+                  margin: const EdgeInsets.only(
+                    top: 25,
+                    bottom: 5,
                   ),
-                  Text(
-                    'Rp 69.000.000,00',
-                    style: GoogleFonts.chakraPetch(
-                        textStyle: const TextStyle(
-                            fontSize: 14, fontWeight: FontWeight.bold)),
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(
+                    left: 20,
                   ),
-                  Container(
-                    margin: const EdgeInsets.only(
-                      top: 45,
-                      bottom: 5,
-                    ),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.only(
-                      left: 20,
-                    ),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Text(
-                          'Your Portfolio',
-                          style: GoogleFonts.chakraPetch(
-                            textStyle: const TextStyle(
-                              fontSize: 15,
-                              fontWeight: FontWeight.bold,
-                            ),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text(
+                        'Your Portfolio',
+                        style: GoogleFonts.chakraPetch(
+                          textStyle: const TextStyle(
+                            fontSize: 15,
+                            fontWeight: FontWeight.bold,
                           ),
                         ),
-                      ],
-                    ),
-                  ),
-                  const Padding(
-                    padding: EdgeInsets.only(
-                      top: 20,
-                    ),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.only(left: 20, right: 20),
-                    child: Positioned(
-                      top: 10,
-                      bottom: 5,
-                      child: Container(
-                        constraints: const BoxConstraints(
-                          maxWidth: double.infinity,
-                          maxHeight: double.infinity,
-                        ),
-                        padding: const EdgeInsets.only(
-                          right: 40.0,
-                          left: 40.0,
-                          top: 10.0,
-                          bottom: 12.0,
-                        ),
-                        decoration: BoxDecoration(
-                            color: Colors.grey.withOpacity(0.1),
-                            borderRadius: BorderRadius.circular(15),
-                            boxShadow: [
-                              BoxShadow(
-                                color: Colors.black.withOpacity(0.8),
-                                spreadRadius: 2,
-                                blurRadius: 5,
-                                offset: const Offset(0, 5),
-                              )
-                            ]),
-                        child: Column(
-                          children: [
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: [
-                                Text(
-                                  'Bitcoin',
-                                  style: GoogleFonts.chakraPetch(
-                                    textStyle: const TextStyle(
-                                      color: Colors.white,
-                                      fontSize: 15,
-                                      fontWeight: FontWeight.normal,
-                                    ),
-                                  ),
-                                ),
-                                Text(
-                                  'Rp 35.500.000,00',
-                                  style: GoogleFonts.chakraPetch(
-                                    textStyle: const TextStyle(
-                                        color: Colors.white,
-                                        fontSize: 15,
-                                        fontWeight: FontWeight.normal),
-                                  ),
-                                ),
-                              ],
-                            ),
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: [
-                                Text(
-                                  'BTC',
-                                  style: GoogleFonts.chakraPetch(
-                                    textStyle: const TextStyle(
-                                      color: Colors.grey,
-                                      fontSize: 15,
-                                      fontWeight: FontWeight.normal,
-                                    ),
-                                  ),
-                                ),
-                                Padding(
-                                  padding: const EdgeInsets.only(top: 7),
-                                  child: Row(
-                                    children: [
-                                      Text(
-                                        '+69.00%',
-                                        style: GoogleFonts.chakraPetch(
-                                          textStyle: const TextStyle(
-                                            color: Colors.green,
-                                            fontSize: 15,
-                                            fontWeight: FontWeight.normal,
-                                          ),
-                                        ),
-                                      ),
-                                    ],
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ],
-                        ),
                       ),
-                    ),
+                    ],
                   ),
-                  const SizedBox(
-                    height: 20,
+                ),
+                const Padding(
+                  padding: EdgeInsets.only(
+                    top: 20,
                   ),
-                  Padding(
-                    padding: const EdgeInsets.only(left: 20, right: 20),
-                    child: Positioned(
-                      top: 10,
-                      bottom: 5,
-                      child: Container(
-                        constraints: const BoxConstraints(
-                          maxWidth: double.infinity,
-                          maxHeight: double.infinity,
-                        ),
-                        padding: const EdgeInsets.only(
-                          right: 40.0,
-                          left: 40.0,
-                          top: 12.0,
-                          bottom: 12.0,
-                        ),
-                        decoration: BoxDecoration(
-                            color: Colors.grey.withOpacity(0.1),
-                            borderRadius: BorderRadius.circular(15),
-                            boxShadow: [
-                              BoxShadow(
-                                color: Colors.black.withOpacity(0.8),
-                                spreadRadius: 2,
-                                blurRadius: 5,
-                                offset: const Offset(0, 5),
-                              )
-                            ]),
-                        child: Column(
-                          children: [
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: [
-                                Text(
-                                  'Ethereum',
-                                  style: GoogleFonts.chakraPetch(
-                                    textStyle: const TextStyle(
-                                      color: Colors.white,
-                                      fontSize: 15,
-                                      fontWeight: FontWeight.normal,
-                                    ),
-                                  ),
-                                ),
-                                Text(
-                                  'Rp 17.250.000,00',
-                                  style: GoogleFonts.chakraPetch(
-                                    textStyle: const TextStyle(
-                                        color: Colors.white,
-                                        fontSize: 15,
-                                        fontWeight: FontWeight.normal),
-                                  ),
-                                ),
-                              ],
-                            ),
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: [
-                                Text(
-                                  'ETH',
-                                  style: GoogleFonts.chakraPetch(
-                                    textStyle: const TextStyle(
-                                      color: Colors.grey,
-                                      fontSize: 15,
-                                      fontWeight: FontWeight.normal,
-                                    ),
-                                  ),
-                                ),
-                                Padding(
-                                  padding: const EdgeInsets.only(top: 7),
-                                  child: Row(
-                                    children: [
-                                      Text(
-                                        '+9.77%',
-                                        style: GoogleFonts.chakraPetch(
-                                          textStyle: const TextStyle(
-                                            color: Colors.green,
-                                            fontSize: 15,
-                                            fontWeight: FontWeight.normal,
-                                          ),
-                                        ),
-                                      ),
-                                    ],
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ],
-                        ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(left: 20, right: 20),
+                  child: Positioned(
+                    top: 10,
+                    bottom: 5,
+                    child: Container(
+                      constraints: const BoxConstraints(
+                        maxWidth: double.infinity,
+                        maxHeight: double.infinity,
                       ),
-                    ),
-                  ),
-                  const SizedBox(
-                    height: 20,
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.only(left: 20, right: 20),
-                    child: Positioned(
-                      top: 100,
-                      bottom: 5,
-                      child: Container(
-                        constraints: const BoxConstraints(
-                          maxWidth: double.infinity,
-                          maxHeight: double.infinity,
-                        ),
-                        padding: const EdgeInsets.only(
-                          right: 40.0,
-                          left: 40.0,
-                          top: 12.0,
-                          bottom: 12.0,
-                        ),
-                        decoration: BoxDecoration(
-                            color: Colors.grey.withOpacity(0.1),
-                            borderRadius: BorderRadius.circular(15),
-                            boxShadow: [
-                              BoxShadow(
-                                color: Colors.black.withOpacity(0.8),
-                                spreadRadius: 2,
-                                blurRadius: 5,
-                                offset: const Offset(0, 5),
-                              )
-                            ]),
-                        child: Column(
-                          children: [
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: [
-                                Text(
-                                  'Cardano',
-                                  style: GoogleFonts.chakraPetch(
-                                    textStyle: const TextStyle(
-                                      color: Colors.white,
-                                      fontSize: 15,
-                                      fontWeight: FontWeight.normal,
-                                    ),
-                                  ),
-                                ),
-                                Text(
-                                  'Rp 9.000.000,00',
-                                  style: GoogleFonts.chakraPetch(
-                                    textStyle: const TextStyle(
-                                        color: Colors.white,
-                                        fontSize: 15,
-                                        fontWeight: FontWeight.normal),
-                                  ),
-                                ),
-                              ],
-                            ),
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: [
-                                Text(
-                                  'ADA',
-                                  style: GoogleFonts.chakraPetch(
-                                    textStyle: const TextStyle(
-                                      color: Colors.grey,
-                                      fontSize: 15,
-                                      fontWeight: FontWeight.normal,
-                                    ),
-                                  ),
-                                ),
-                                Padding(
-                                  padding: const EdgeInsets.only(top: 7),
-                                  child: Row(
-                                    children: [
-                                      Text(
-                                        '-22.97%',
-                                        style: GoogleFonts.chakraPetch(
-                                          textStyle: const TextStyle(
-                                            color: Colors.red,
-                                            fontSize: 15,
-                                            fontWeight: FontWeight.normal,
-                                          ),
-                                        ),
-                                      ),
-                                    ],
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ],
-                        ),
+                      padding: const EdgeInsets.only(
+                        right: 40.0,
+                        left: 40.0,
+                        top: 10.0,
+                        bottom: 12.0,
                       ),
-                    ),
-                  ),
-                  const SizedBox(
-                    height: 20,
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.only(left: 20, right: 20),
-                    child: Positioned(
-                      top: 100,
-                      bottom: 5,
-                      child: Container(
-                        constraints: const BoxConstraints(
-                          maxWidth: double.infinity,
-                          maxHeight: double.infinity,
-                        ),
-                        padding: const EdgeInsets.only(
-                          right: 40.0,
-                          left: 40.0,
-                          top: 12.0,
-                          bottom: 12.0,
-                        ),
-                        decoration: BoxDecoration(
-                            color: Colors.grey.withOpacity(0.1),
-                            borderRadius: BorderRadius.circular(15),
-                            boxShadow: [
-                              BoxShadow(
-                                color: Colors.black.withOpacity(0.8),
-                                spreadRadius: 2,
-                                blurRadius: 5,
-                                offset: const Offset(0, 5),
-                              )
-                            ]),
-                        child: Column(
-                          children: [
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: [
-                                Text(
-                                  'Dogecoin',
-                                  style: GoogleFonts.chakraPetch(
-                                    textStyle: const TextStyle(
-                                      color: Colors.white,
-                                      fontSize: 15,
-                                      fontWeight: FontWeight.normal,
-                                    ),
-                                  ),
-                                ),
-                                Text(
-                                  'Rp 7.250.000,00',
-                                  style: GoogleFonts.chakraPetch(
-                                    textStyle: const TextStyle(
-                                        color: Colors.white,
-                                        fontSize: 15,
-                                        fontWeight: FontWeight.normal),
-                                  ),
-                                ),
-                              ],
-                            ),
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: [
-                                Text(
-                                  'DOGE',
-                                  style: GoogleFonts.chakraPetch(
-                                    textStyle: const TextStyle(
-                                      color: Colors.grey,
-                                      fontSize: 15,
-                                      fontWeight: FontWeight.normal,
-                                    ),
-                                  ),
-                                ),
-                                Padding(
-                                  padding: const EdgeInsets.only(top: 7),
-                                  child: Row(
-                                    children: [
-                                      Text(
-                                        '-16.58%',
-                                        style: GoogleFonts.chakraPetch(
-                                          textStyle: const TextStyle(
-                                            color: Colors.red,
-                                            fontSize: 15,
-                                            fontWeight: FontWeight.normal,
-                                          ),
-                                        ),
-                                      ),
-                                    ],
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ],
-                        ),
-                      ),
-                    ),
-                  ),
-                  Padding(
-                    padding:
-                        const EdgeInsets.only(top: 20, left: 25, right: 25),
-                    child: Row(
-                      children: <Widget>[
-                        Expanded(
-                          child: (Container(
-                            height: 50,
-                            decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(15),
-                                color: const Color.fromRGBO(255, 137, 9, 1)),
-                            child: Center(
-                                child: TextButton(
-                              onPressed: () {},
-                              child: Text(
-                                'Deposit',
+                      decoration: BoxDecoration(
+                          color: Colors.grey.withOpacity(0.1),
+                          borderRadius: BorderRadius.circular(15),
+                          boxShadow: [
+                            BoxShadow(
+                              color: Colors.black.withOpacity(0.8),
+                              spreadRadius: 2,
+                              blurRadius: 5,
+                              offset: const Offset(0, 5),
+                            )
+                          ]),
+                      child: Column(
+                        children: [
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Text(
+                                'Bitcoin',
                                 style: GoogleFonts.chakraPetch(
-                                    textStyle: TextStyle(
-                                        color: Colors.white,
-                                        fontWeight: FontWeight.bold,
-                                        shadows: [
-                                      Shadow(
-                                          color: Colors.black.withOpacity(0.5),
-                                          offset: const Offset(3, 3),
-                                          blurRadius: 5)
-                                    ])),
+                                  textStyle: const TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 15,
+                                    fontWeight: FontWeight.normal,
+                                  ),
+                                ),
                               ),
-                            )),
-                          )),
-                        ),
-                        const SizedBox(
-                          width: 30,
-                        ),
-                        Expanded(
-                          child: (Container(
-                            height: 50,
-                            decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(15),
-                                color: Colors.grey[900],
-                                border: Border.all(
-                                    color: Colors.white, width: 1.0)),
-                            child: Center(
-                                child: TextButton(
-                                    onPressed: () {},
-                                    child: Text(
-                                      'Withdraw',
+                              Text(
+                                'Rp 35.500.000,00',
+                                style: GoogleFonts.chakraPetch(
+                                  textStyle: const TextStyle(
+                                      color: Colors.white,
+                                      fontSize: 15,
+                                      fontWeight: FontWeight.normal),
+                                ),
+                              ),
+                            ],
+                          ),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Text(
+                                'BTC',
+                                style: GoogleFonts.chakraPetch(
+                                  textStyle: const TextStyle(
+                                    color: Colors.grey,
+                                    fontSize: 15,
+                                    fontWeight: FontWeight.normal,
+                                  ),
+                                ),
+                              ),
+                              Padding(
+                                padding: const EdgeInsets.only(top: 7),
+                                child: Row(
+                                  children: [
+                                    Text(
+                                      '+69.00%',
                                       style: GoogleFonts.chakraPetch(
-                                          textStyle: TextStyle(
-                                              color: Colors.white,
-                                              fontWeight: FontWeight.bold,
-                                              shadows: [
-                                            Shadow(
-                                                color: Colors.black
-                                                    .withOpacity(0.5),
-                                                offset: const Offset(3, 3),
-                                                blurRadius: 5)
-                                          ])),
-                                    ))),
-                          )),
-                        )
-                      ],
+                                        textStyle: const TextStyle(
+                                          color: Colors.green,
+                                          fontSize: 15,
+                                          fontWeight: FontWeight.normal,
+                                        ),
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ],
+                          ),
+                        ],
+                      ),
                     ),
                   ),
-                ],
-              ),
+                ),
+                const SizedBox(
+                  height: 20,
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(left: 20, right: 20),
+                  child: Positioned(
+                    top: 10,
+                    bottom: 5,
+                    child: Container(
+                      constraints: const BoxConstraints(
+                        maxWidth: double.infinity,
+                        maxHeight: double.infinity,
+                      ),
+                      padding: const EdgeInsets.only(
+                        right: 40.0,
+                        left: 40.0,
+                        top: 12.0,
+                        bottom: 12.0,
+                      ),
+                      decoration: BoxDecoration(
+                          color: Colors.grey.withOpacity(0.1),
+                          borderRadius: BorderRadius.circular(15),
+                          boxShadow: [
+                            BoxShadow(
+                              color: Colors.black.withOpacity(0.8),
+                              spreadRadius: 2,
+                              blurRadius: 5,
+                              offset: const Offset(0, 5),
+                            )
+                          ]),
+                      child: Column(
+                        children: [
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Text(
+                                'Ethereum',
+                                style: GoogleFonts.chakraPetch(
+                                  textStyle: const TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 15,
+                                    fontWeight: FontWeight.normal,
+                                  ),
+                                ),
+                              ),
+                              Text(
+                                'Rp 17.250.000,00',
+                                style: GoogleFonts.chakraPetch(
+                                  textStyle: const TextStyle(
+                                      color: Colors.white,
+                                      fontSize: 15,
+                                      fontWeight: FontWeight.normal),
+                                ),
+                              ),
+                            ],
+                          ),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Text(
+                                'ETH',
+                                style: GoogleFonts.chakraPetch(
+                                  textStyle: const TextStyle(
+                                    color: Colors.grey,
+                                    fontSize: 15,
+                                    fontWeight: FontWeight.normal,
+                                  ),
+                                ),
+                              ),
+                              Padding(
+                                padding: const EdgeInsets.only(top: 7),
+                                child: Row(
+                                  children: [
+                                    Text(
+                                      '+9.77%',
+                                      style: GoogleFonts.chakraPetch(
+                                        textStyle: const TextStyle(
+                                          color: Colors.green,
+                                          fontSize: 15,
+                                          fontWeight: FontWeight.normal,
+                                        ),
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ],
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                ),
+                const SizedBox(
+                  height: 20,
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(left: 20, right: 20),
+                  child: Positioned(
+                    top: 100,
+                    bottom: 5,
+                    child: Container(
+                      constraints: const BoxConstraints(
+                        maxWidth: double.infinity,
+                        maxHeight: double.infinity,
+                      ),
+                      padding: const EdgeInsets.only(
+                        right: 40.0,
+                        left: 40.0,
+                        top: 12.0,
+                        bottom: 12.0,
+                      ),
+                      decoration: BoxDecoration(
+                          color: Colors.grey.withOpacity(0.1),
+                          borderRadius: BorderRadius.circular(15),
+                          boxShadow: [
+                            BoxShadow(
+                              color: Colors.black.withOpacity(0.8),
+                              spreadRadius: 2,
+                              blurRadius: 5,
+                              offset: const Offset(0, 5),
+                            )
+                          ]),
+                      child: Column(
+                        children: [
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Text(
+                                'Cardano',
+                                style: GoogleFonts.chakraPetch(
+                                  textStyle: const TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 15,
+                                    fontWeight: FontWeight.normal,
+                                  ),
+                                ),
+                              ),
+                              Text(
+                                'Rp 9.000.000,00',
+                                style: GoogleFonts.chakraPetch(
+                                  textStyle: const TextStyle(
+                                      color: Colors.white,
+                                      fontSize: 15,
+                                      fontWeight: FontWeight.normal),
+                                ),
+                              ),
+                            ],
+                          ),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Text(
+                                'ADA',
+                                style: GoogleFonts.chakraPetch(
+                                  textStyle: const TextStyle(
+                                    color: Colors.grey,
+                                    fontSize: 15,
+                                    fontWeight: FontWeight.normal,
+                                  ),
+                                ),
+                              ),
+                              Padding(
+                                padding: const EdgeInsets.only(top: 7),
+                                child: Row(
+                                  children: [
+                                    Text(
+                                      '-22.97%',
+                                      style: GoogleFonts.chakraPetch(
+                                        textStyle: const TextStyle(
+                                          color: Colors.red,
+                                          fontSize: 15,
+                                          fontWeight: FontWeight.normal,
+                                        ),
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ],
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                ),
+                const SizedBox(
+                  height: 20,
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(left: 20, right: 20),
+                  child: Positioned(
+                    top: 100,
+                    bottom: 5,
+                    child: Container(
+                      constraints: const BoxConstraints(
+                        maxWidth: double.infinity,
+                        maxHeight: double.infinity,
+                      ),
+                      padding: const EdgeInsets.only(
+                        right: 40.0,
+                        left: 40.0,
+                        top: 12.0,
+                        bottom: 12.0,
+                      ),
+                      decoration: BoxDecoration(
+                          color: Colors.grey.withOpacity(0.1),
+                          borderRadius: BorderRadius.circular(15),
+                          boxShadow: [
+                            BoxShadow(
+                              color: Colors.black.withOpacity(0.8),
+                              spreadRadius: 2,
+                              blurRadius: 5,
+                              offset: const Offset(0, 5),
+                            )
+                          ]),
+                      child: Column(
+                        children: [
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Text(
+                                'Dogecoin',
+                                style: GoogleFonts.chakraPetch(
+                                  textStyle: const TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 15,
+                                    fontWeight: FontWeight.normal,
+                                  ),
+                                ),
+                              ),
+                              Text(
+                                'Rp 7.250.000,00',
+                                style: GoogleFonts.chakraPetch(
+                                  textStyle: const TextStyle(
+                                      color: Colors.white,
+                                      fontSize: 15,
+                                      fontWeight: FontWeight.normal),
+                                ),
+                              ),
+                            ],
+                          ),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Text(
+                                'DOGE',
+                                style: GoogleFonts.chakraPetch(
+                                  textStyle: const TextStyle(
+                                    color: Colors.grey,
+                                    fontSize: 15,
+                                    fontWeight: FontWeight.normal,
+                                  ),
+                                ),
+                              ),
+                              Padding(
+                                padding: const EdgeInsets.only(top: 7),
+                                child: Row(
+                                  children: [
+                                    Text(
+                                      '-16.58%',
+                                      style: GoogleFonts.chakraPetch(
+                                        textStyle: const TextStyle(
+                                          color: Colors.red,
+                                          fontSize: 15,
+                                          fontWeight: FontWeight.normal,
+                                        ),
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ],
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(top: 20, left: 25, right: 25),
+                  child: Row(
+                    children: <Widget>[
+                      Expanded(
+                        child: (Container(
+                          height: 50,
+                          decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(15),
+                              color: const Color.fromRGBO(255, 137, 9, 1)),
+                          child: Center(
+                              child: TextButton(
+                            onPressed: () {},
+                            child: Text(
+                              'Deposit',
+                              style: GoogleFonts.chakraPetch(
+                                  textStyle: TextStyle(
+                                      color: Colors.white,
+                                      fontWeight: FontWeight.bold,
+                                      shadows: [
+                                    Shadow(
+                                        color: Colors.black.withOpacity(0.5),
+                                        offset: const Offset(3, 3),
+                                        blurRadius: 5)
+                                  ])),
+                            ),
+                          )),
+                        )),
+                      ),
+                      const SizedBox(
+                        width: 30,
+                      ),
+                      Expanded(
+                        child: (Container(
+                          height: 50,
+                          decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(15),
+                              color: Colors.grey[900],
+                              border:
+                                  Border.all(color: Colors.white, width: 1.0)),
+                          child: Center(
+                              child: TextButton(
+                                  onPressed: () {},
+                                  child: Text(
+                                    'Withdraw',
+                                    style: GoogleFonts.chakraPetch(
+                                        textStyle: TextStyle(
+                                            color: Colors.white,
+                                            fontWeight: FontWeight.bold,
+                                            shadows: [
+                                          Shadow(
+                                              color:
+                                                  Colors.black.withOpacity(0.5),
+                                              offset: const Offset(3, 3),
+                                              blurRadius: 5)
+                                        ])),
+                                  ))),
+                        )),
+                      )
+                    ],
+                  ),
+                ),
+              ],
             ),
           ),
         )),
