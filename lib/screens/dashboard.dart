@@ -5,6 +5,8 @@ import 'package:flutter_application_tugas_kelompok_nftmarket/components/tabbar_l
 import 'package:flutter_application_tugas_kelompok_nftmarket/components/tabbar_daftar.dart';
 
 class Dashboard extends StatefulWidget {
+  const Dashboard({Key? key}) : super(key: key);
+
   @override
   _DashboardState createState() => _DashboardState();
 }
@@ -12,12 +14,12 @@ class Dashboard extends StatefulWidget {
 class _DashboardState extends State<Dashboard> {
   TextEditingController pass = TextEditingController();
 
-  // final bool? _rememberMe = false;
+
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      drawer: NavigationDrawerWidget(),
+      drawer: const NavigationDrawerWidget(),
       appBar: AppBar(
         backgroundColor: Colors.transparent,
       ),

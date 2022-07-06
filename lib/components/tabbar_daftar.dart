@@ -40,12 +40,12 @@ class _TabBarPageState extends State<TabBarPage> {
                 color: Colors.orange,
                 borderRadius: BorderRadius.circular(15),
               ),
-              tabs: [
-                const Tab(text: 'Email'),
-                const Tab(text: 'Phone'),
+              tabs: const [
+                Tab(text: 'Email'),
+                Tab(text: 'Phone'),
               ]),
         ),
-        body: TabBarView(children: [
+        body: const TabBarView(children: [
           SignUpPage(),
           SignUpPhonePage(),
         ]),
@@ -64,7 +64,7 @@ class _TabBarPageState extends State<TabBarPage> {
           color: Colors.white,
           onPressed: () {
             Navigator.push(
-                context, MaterialPageRoute(builder: (_) => Dashboard()));
+                context, MaterialPageRoute(builder: (_) => const Dashboard()));
           },
         ));
   }

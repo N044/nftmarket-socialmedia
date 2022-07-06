@@ -49,7 +49,7 @@ class _TabBarPageLoginState extends State<TabBarPageLogin> {
                 Tab(text: 'Phone'),
               ]),
         ),
-        body: TabBarView(children: [
+        body: const TabBarView(children: [
           SignInPage(),
           SignInPhonePage(),
         ]),
@@ -68,7 +68,7 @@ class _TabBarPageLoginState extends State<TabBarPageLogin> {
           color: Colors.white,
           onPressed: () {
             Navigator.push(
-                context, MaterialPageRoute(builder: (_) => Dashboard()));
+                context, MaterialPageRoute(builder: (_) => const Dashboard()));
           },
         ));
   }

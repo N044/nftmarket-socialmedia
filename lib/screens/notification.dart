@@ -20,7 +20,7 @@ class _NotificationPageState extends State<NotificationPage> {
             text: TextSpan(
               text: 'Notification',
               style: GoogleFonts.chakraPetch(
-                textStyle: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+                textStyle: const TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
               ),
             ),
           ),

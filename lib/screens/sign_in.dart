@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:simple_rich_text/simple_rich_text.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
-import 'package:flutter_application_tugas_kelompok_nftmarket/screens/sign_up.dart';
 import 'package:flutter_application_tugas_kelompok_nftmarket/components/navbar.dart';
 import 'package:flutter_application_tugas_kelompok_nftmarket/screens/dashboard.dart';
-import 'package:flutter_application_tugas_kelompok_nftmarket/screens/sign_in_phone.dart';
+
 import 'package:flutter_application_tugas_kelompok_nftmarket/components/tabbar_daftar.dart';
 
 class SignInPage extends StatefulWidget {
+  const SignInPage({Key? key}) : super(key: key);
+
   @override
   _SignInPageState createState() => _SignInPageState();
 }
@@ -28,30 +28,30 @@ class _SignInPageState extends State<SignInPage> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              SizedBox(
+              const SizedBox(
                 height: 65,
               ),
               buildEmailField(),
-              SizedBox(
+              const SizedBox(
                 height: 25,
               ),
               buildPasswordField(),
-              SizedBox(
+              const SizedBox(
                 height: 50,
               ),
               buildCreateanAccount(),
-              SizedBox(
+              const SizedBox(
                 height: 15,
               ),
               buildTextCenter(
                   name: 'or',
                   choose: GoogleFonts.chakraPetch(
-                      textStyle: TextStyle(color: Colors.white))),
-              SizedBox(
+                      textStyle: const TextStyle(color: Colors.white))),
+              const SizedBox(
                 height: 15,
               ),
               buildCreateanAccountWithGoogle(),
-              SizedBox(
+              const SizedBox(
                 height: 15,
               ),
               buildCreateanAccountWithApple(),
@@ -65,16 +65,16 @@ class _SignInPageState extends State<SignInPage> {
 
   Widget buildButton() {
     return Container(
-        padding: EdgeInsets.only(left: 15),
+        padding: const EdgeInsets.only(left: 15),
         child: IconButton(
-          icon: Icon(
+          icon: const Icon(
             Icons.arrow_back_ios,
             size: 15,
           ),
           color: Colors.white,
           onPressed: () {
             Navigator.push(
-                context, MaterialPageRoute(builder: (_) => Dashboard()));
+                context, MaterialPageRoute(builder: (_) => const Dashboard()));
           },
         ));
   }
@@ -84,23 +84,23 @@ class _SignInPageState extends State<SignInPage> {
       padding: const EdgeInsets.only(top: 10, left: 45, right: 45),
       child: TextFormField(
         style: GoogleFonts.poppins(
-            textStyle: TextStyle(
+            textStyle: const TextStyle(
           fontSize: 15,
           color: Colors.white,
         )),
         keyboardType: TextInputType.emailAddress,
         decoration: InputDecoration(
-            fillColor: Color.fromRGBO(26, 27, 38, 1),
+            fillColor: const Color.fromRGBO(26, 27, 38, 1),
             filled: true,
             hintText: "Enter your Email Address",
             labelText: "Email Addres",
             floatingLabelBehavior: FloatingLabelBehavior.always,
-            floatingLabelStyle: TextStyle(
+            floatingLabelStyle: const TextStyle(
               color: Colors.white,
               fontSize: 16,
             ),
-            contentPadding: EdgeInsets.all(15.0),
-            hintStyle: TextStyle(
+            contentPadding: const EdgeInsets.all(15.0),
+            hintStyle: const TextStyle(
               fontSize: 13,
               color: Colors.white,
             ),
@@ -138,18 +138,18 @@ class _SignInPageState extends State<SignInPage> {
           Checkbox(
             value: _agreeterms,
             checkColor: Colors.black,
-            activeColor: Color.fromRGBO(255, 137, 9, 1),
+            activeColor: const Color.fromRGBO(255, 137, 9, 1),
             onChanged: (value) {
               setState(() {
                 _agreeterms = value;
               });
             },
-            side: BorderSide(color: Color.fromRGBO(255, 137, 9, 1)),
+            side: const BorderSide(color: Color.fromRGBO(255, 137, 9, 1)),
           ),
           SimpleRichText(
             'I agree to the *_Terms_* and *_Privacy Policy_*',
             style: GoogleFonts.chakraPetch(
-                textStyle: TextStyle(
+                textStyle: const TextStyle(
               fontSize: 13,
             )),
           ),
@@ -163,24 +163,24 @@ class _SignInPageState extends State<SignInPage> {
       padding: const EdgeInsets.only(top: 10, left: 45, right: 45),
       child: TextFormField(
         style: GoogleFonts.poppins(
-            textStyle: TextStyle(
+            textStyle: const TextStyle(
           fontSize: 15,
           color: Colors.white,
         )),
         keyboardType: TextInputType.emailAddress,
         decoration: InputDecoration(
-            fillColor: Color.fromRGBO(26, 27, 38, 1),
+            fillColor: const Color.fromRGBO(26, 27, 38, 1),
             filled: true,
             hintText: "Enter your password",
             labelText: "Password",
-            suffixIcon: Icon(Icons.visibility_off_outlined),
+            suffixIcon: const Icon(Icons.visibility_off_outlined),
             floatingLabelBehavior: FloatingLabelBehavior.always,
-            floatingLabelStyle: TextStyle(
+            floatingLabelStyle: const TextStyle(
               color: Colors.white,
               fontSize: 16,
             ),
-            contentPadding: EdgeInsets.all(15.0),
-            hintStyle: TextStyle(
+            contentPadding: const EdgeInsets.all(15.0),
+            hintStyle: const TextStyle(
               fontSize: 13,
               color: Colors.white,
             ),
@@ -195,12 +195,12 @@ class _SignInPageState extends State<SignInPage> {
       padding: const EdgeInsets.only(left: 45, right: 45),
       child: ElevatedButton(
         onPressed: () {
-          Navigator.push(context, MaterialPageRoute(builder: (_) => Home()));
+          Navigator.push(context, MaterialPageRoute(builder: (_) => const Home()));
         },
         child: Text(
           "Sign In",
           style: GoogleFonts.poppins(
-              textStyle: TextStyle(color: Colors.white),
+              textStyle: const TextStyle(color: Colors.white),
               shadows: [
                 Shadow(
                     color: Colors.black.withOpacity(0.5),
@@ -211,8 +211,8 @@ class _SignInPageState extends State<SignInPage> {
         style: ElevatedButton.styleFrom(
             shape:
                 RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
-            minimumSize: Size(500, 50),
-            primary: Color.fromRGBO(255, 137, 9, 1)),
+            minimumSize: const Size(500, 50),
+            primary: const Color.fromRGBO(255, 137, 9, 1)),
       ),
     );
   }
@@ -222,12 +222,12 @@ class _SignInPageState extends State<SignInPage> {
       padding: const EdgeInsets.only(left: 95, right: 85),
       child: ElevatedButton(
         onPressed: () {
-          Navigator.push(context, MaterialPageRoute(builder: (_) => Home()));
+          Navigator.push(context, MaterialPageRoute(builder: (_) => const Home()));
         },
         child: Text(
           "Sign In with Google",
           style: GoogleFonts.roboto(
-            textStyle: TextStyle(
+            textStyle: const TextStyle(
                 color: Color.fromRGBO(116, 116, 117, 1),
                 fontWeight: FontWeight.bold),
           ),
@@ -235,7 +235,7 @@ class _SignInPageState extends State<SignInPage> {
         style: ElevatedButton.styleFrom(
             shape:
                 RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
-            minimumSize: Size(250, 50),
+            minimumSize: const Size(250, 50),
             primary: Colors.white),
       ),
     );
@@ -246,19 +246,19 @@ class _SignInPageState extends State<SignInPage> {
       padding: const EdgeInsets.only(left: 95, right: 85),
       child: ElevatedButton(
         onPressed: () {
-          Navigator.push(context, MaterialPageRoute(builder: (_) => Home()));
+          Navigator.push(context, MaterialPageRoute(builder: (_) => const Home()));
         },
         child: Text(
           "Sign In with Apple",
           style: GoogleFonts.roboto(
             textStyle:
-                TextStyle(color: Colors.black, fontWeight: FontWeight.bold),
+                const TextStyle(color: Colors.black, fontWeight: FontWeight.bold),
           ),
         ),
         style: ElevatedButton.styleFrom(
             shape:
                 RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
-            minimumSize: Size(250, 50),
+            minimumSize: const Size(250, 50),
             primary: Colors.white),
       ),
     );
@@ -272,7 +272,7 @@ class _SignInPageState extends State<SignInPage> {
         children: [
           Text("Not registered yet?",
               style: GoogleFonts.poppins(
-                textStyle: TextStyle(
+                textStyle: const TextStyle(
                   fontSize: 12,
                   color: Colors.white,
                 ),
@@ -280,9 +280,9 @@ class _SignInPageState extends State<SignInPage> {
           TextButton(
               onPressed: () {
                 Navigator.push(
-                    context, MaterialPageRoute(builder: (_) => TabBarPage()));
+                    context, MaterialPageRoute(builder: (_) => const TabBarPage()));
               },
-              child: Text(
+              child: const Text(
                 "Create An Account",
                 style: TextStyle(
                     color: Colors.orange,

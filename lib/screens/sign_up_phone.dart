@@ -1,16 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_tugas_kelompok_nftmarket/screens/dashboard.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:simple_rich_text/simple_rich_text.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
-import 'package:flutter_application_tugas_kelompok_nftmarket/screens/sign_up.dart';
-import 'package:flutter_application_tugas_kelompok_nftmarket/screens/sign_in.dart';
-import 'package:flutter_application_tugas_kelompok_nftmarket/screens/dashboard.dart';
-import 'package:flutter_application_tugas_kelompok_nftmarket/screens/sign_in_phone.dart';
-import 'package:flutter_application_tugas_kelompok_nftmarket/components/tabbar_login.dart';
-import 'package:flutter_application_tugas_kelompok_nftmarket/components/tabbar_daftar.dart';
+import '../components/tabbar_login.dart';
+
+
 
 class SignUpPhonePage extends StatefulWidget {
+  const SignUpPhonePage({Key? key}) : super(key: key);
+
   @override
   _SignUpPhonePageState createState() => _SignUpPhonePageState();
 }
@@ -29,11 +28,11 @@ class _SignUpPhonePageState extends State<SignUpPhonePage> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              SizedBox(
+              const SizedBox(
                 height: 65,
               ),
               buildEmailField(),
-              SizedBox(
+              const SizedBox(
                 height: 25,
               ),
               buildPasswordField(),
@@ -41,27 +40,27 @@ class _SignUpPhonePageState extends State<SignUpPhonePage> {
                   name:
                       'Use 8 or more characters with a mix of letters, \nnumbers, and symbols.',
                   choose: GoogleFonts.chakraPetch(
-                      textStyle: TextStyle(
+                      textStyle: const TextStyle(
                     color: Colors.white,
                     fontSize: 13,
                   ))),
-              SizedBox(
+              const SizedBox(
                 height: 25,
               ),
               buildCheckBox(),
               buildCreateanAccount(),
-              SizedBox(
+              const SizedBox(
                 height: 15,
               ),
               buildTextCenter(
                   name: 'or',
                   choose: GoogleFonts.chakraPetch(
-                      textStyle: TextStyle(color: Colors.white))),
-              SizedBox(
+                      textStyle: const TextStyle(color: Colors.white))),
+              const SizedBox(
                 height: 15,
               ),
               buildCreateanAccountWithGoogle(),
-              SizedBox(
+              const SizedBox(
                 height: 15,
               ),
               buildCreateanAccountWithApple(),
@@ -75,16 +74,16 @@ class _SignUpPhonePageState extends State<SignUpPhonePage> {
 
   Widget buildButton() {
     return Container(
-        padding: EdgeInsets.only(left: 15),
+        padding: const EdgeInsets.only(left: 15),
         child: IconButton(
-          icon: Icon(
+          icon: const Icon(
             Icons.arrow_back_ios,
             size: 15,
           ),
           color: Colors.white,
           onPressed: () {
             Navigator.push(
-                context, MaterialPageRoute(builder: (_) => Dashboard()));
+                context, MaterialPageRoute(builder: (_) => const Dashboard()));
           },
         ));
   }
@@ -94,23 +93,23 @@ class _SignUpPhonePageState extends State<SignUpPhonePage> {
       padding: const EdgeInsets.only(top: 10, left: 45, right: 45),
       child: TextFormField(
         style: GoogleFonts.poppins(
-            textStyle: TextStyle(
+            textStyle: const TextStyle(
           fontSize: 15,
           color: Colors.white,
         )),
         keyboardType: TextInputType.emailAddress,
         decoration: InputDecoration(
-            fillColor: Color.fromRGBO(26, 27, 38, 1),
+            fillColor: const Color.fromRGBO(26, 27, 38, 1),
             filled: true,
             hintText: "Enter your Phone Number",
             labelText: "Phone Number",
             floatingLabelBehavior: FloatingLabelBehavior.always,
-            floatingLabelStyle: TextStyle(
+            floatingLabelStyle: const TextStyle(
               color: Colors.white,
               fontSize: 16,
             ),
-            contentPadding: EdgeInsets.all(15.0),
-            hintStyle: TextStyle(
+            contentPadding: const EdgeInsets.all(15.0),
+            hintStyle: const TextStyle(
               fontSize: 13,
               color: Colors.white,
             ),
@@ -148,18 +147,18 @@ class _SignUpPhonePageState extends State<SignUpPhonePage> {
           Checkbox(
             value: _agreeterms,
             checkColor: Colors.black,
-            activeColor: Color.fromRGBO(255, 137, 9, 1),
+            activeColor: const Color.fromRGBO(255, 137, 9, 1),
             onChanged: (value) {
               setState(() {
                 _agreeterms = value;
               });
             },
-            side: BorderSide(color: Color.fromRGBO(255, 137, 9, 1)),
+            side: const BorderSide(color: Color.fromRGBO(255, 137, 9, 1)),
           ),
           SimpleRichText(
             'I agree to the *_Terms_* and *_Privacy Policy_*',
             style: GoogleFonts.chakraPetch(
-                textStyle: TextStyle(
+                textStyle: const TextStyle(
               fontSize: 13,
             )),
           ),
@@ -173,24 +172,24 @@ class _SignUpPhonePageState extends State<SignUpPhonePage> {
       padding: const EdgeInsets.only(top: 10, left: 45, right: 45),
       child: TextFormField(
         style: GoogleFonts.poppins(
-            textStyle: TextStyle(
+            textStyle: const TextStyle(
           fontSize: 15,
           color: Colors.white,
         )),
         keyboardType: TextInputType.emailAddress,
         decoration: InputDecoration(
-            fillColor: Color.fromRGBO(26, 27, 38, 1),
+            fillColor: const Color.fromRGBO(26, 27, 38, 1),
             filled: true,
             hintText: "Enter your password",
             labelText: "Password",
-            suffixIcon: Icon(Icons.visibility_off_outlined),
+            suffixIcon: const Icon(Icons.visibility_off_outlined),
             floatingLabelBehavior: FloatingLabelBehavior.always,
-            floatingLabelStyle: TextStyle(
+            floatingLabelStyle: const TextStyle(
               color: Colors.white,
               fontSize: 16,
             ),
-            contentPadding: EdgeInsets.all(15.0),
-            hintStyle: TextStyle(
+            contentPadding: const EdgeInsets.all(15.0),
+            hintStyle: const TextStyle(
               fontSize: 13,
               color: Colors.white,
             ),
@@ -206,12 +205,12 @@ class _SignUpPhonePageState extends State<SignUpPhonePage> {
       child: ElevatedButton(
         onPressed: () {
           Navigator.push(
-              context, MaterialPageRoute(builder: (_) => TabBarPageLogin()));
+              context, MaterialPageRoute(builder: (_) => const TabBarPageLogin()));
         },
         child: Text(
           "Request OTP",
           style: GoogleFonts.poppins(
-              textStyle: TextStyle(color: Colors.white),
+              textStyle: const TextStyle(color: Colors.white),
               shadows: [
                 Shadow(
                     color: Colors.black.withOpacity(0.5),
@@ -222,8 +221,8 @@ class _SignUpPhonePageState extends State<SignUpPhonePage> {
         style: ElevatedButton.styleFrom(
             shape:
                 RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
-            minimumSize: Size(500, 50),
-            primary: Color.fromRGBO(255, 137, 9, 1)),
+            minimumSize: const Size(500, 50),
+            primary: const Color.fromRGBO(255, 137, 9, 1)),
       ),
     );
   }
@@ -234,12 +233,12 @@ class _SignUpPhonePageState extends State<SignUpPhonePage> {
       child: ElevatedButton(
         onPressed: () {
           Navigator.push(
-              context, MaterialPageRoute(builder: (_) => TabBarPageLogin()));
+              context, MaterialPageRoute(builder: (_) => const TabBarPageLogin()));
         },
         child: Text(
           "Sign Up with Google",
           style: GoogleFonts.roboto(
-            textStyle: TextStyle(
+            textStyle: const TextStyle(
                 color: Color.fromRGBO(116, 116, 117, 1),
                 fontWeight: FontWeight.bold),
           ),
@@ -247,7 +246,7 @@ class _SignUpPhonePageState extends State<SignUpPhonePage> {
         style: ElevatedButton.styleFrom(
             shape:
                 RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
-            minimumSize: Size(250, 50),
+            minimumSize: const Size(250, 50),
             primary: Colors.white),
       ),
     );
@@ -259,19 +258,19 @@ class _SignUpPhonePageState extends State<SignUpPhonePage> {
       child: ElevatedButton(
         onPressed: () {
           Navigator.push(
-              context, MaterialPageRoute(builder: (_) => TabBarPageLogin()));
+              context, MaterialPageRoute(builder: (_) => const TabBarPageLogin()));
         },
         child: Text(
           "Sign Up with Apple",
           style: GoogleFonts.roboto(
             textStyle:
-                TextStyle(color: Colors.black, fontWeight: FontWeight.bold),
+                const TextStyle(color: Colors.black, fontWeight: FontWeight.bold),
           ),
         ),
         style: ElevatedButton.styleFrom(
             shape:
                 RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
-            minimumSize: Size(250, 50),
+            minimumSize: const Size(250, 50),
             primary: Colors.white),
       ),
     );
@@ -286,7 +285,7 @@ class _SignUpPhonePageState extends State<SignUpPhonePage> {
           Text(
             "Already have an account?",
             style: GoogleFonts.poppins(
-              textStyle: TextStyle(
+              textStyle: const TextStyle(
                 fontSize: 12,
                 color: Colors.grey,
               ),
@@ -295,11 +294,11 @@ class _SignUpPhonePageState extends State<SignUpPhonePage> {
           TextButton(
               onPressed: () {
                 Navigator.push(context,
-                    MaterialPageRoute(builder: (_) => TabBarPageLogin()));
+                    MaterialPageRoute(builder: (_) => const TabBarPageLogin()));
               },
               child: Text("Log in",
                   style: GoogleFonts.poppins(
-                      textStyle: TextStyle(
+                      textStyle: const TextStyle(
                           color: Colors.orange,
                           fontWeight: FontWeight.bold,
                           fontSize: 12))))

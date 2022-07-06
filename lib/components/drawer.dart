@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 
 class NavigationDrawerWidget extends StatelessWidget {
-  final padding = EdgeInsets.symmetric(horizontal: 20);
+  final padding = const EdgeInsets.symmetric(horizontal: 20);
+
+  const NavigationDrawerWidget({Key? key}) : super(key: key);
 
   get hoverColor => null;
 
@@ -49,7 +51,7 @@ class NavigationDrawerWidget extends StatelessWidget {
                   const SizedBox(
                     height: 24,
                   ),
-                  Divider(
+                  const Divider(
                     color: Colors.white70,
                   ),
                   const SizedBox(height: 24),
@@ -75,7 +77,7 @@ class NavigationDrawerWidget extends StatelessWidget {
     required String text,
     required IconData icon,
   }) {
-    final color = Colors.white;
+    const color = Colors.white;
 
     return ListTile(
       leading: Icon(
@@ -84,7 +86,7 @@ class NavigationDrawerWidget extends StatelessWidget {
       ),
       title: Text(
         text,
-        style: TextStyle(color: color),
+        style: const TextStyle(color: color),
       ),
       hoverColor: hoverColor,
       onTap: () {},
@@ -93,15 +95,15 @@ class NavigationDrawerWidget extends StatelessWidget {
 }
 
 Widget buildSearchField() {
-  final color = Colors.white;
+  const color = Colors.white;
 
   return TextField(
-    style: TextStyle(color: color),
+    style: const TextStyle(color: color),
     decoration: InputDecoration(
-        contentPadding: EdgeInsets.symmetric(horizontal: 20, vertical: 15),
+        contentPadding: const EdgeInsets.symmetric(horizontal: 20, vertical: 15),
         hintText: 'Search',
-        hintStyle: TextStyle(color: color),
-        prefixIcon: Icon(Icons.search, color: color),
+        hintStyle: const TextStyle(color: color),
+        prefixIcon: const Icon(Icons.search, color: color),
         filled: true,
         fillColor: Colors.transparent,
         enabledBorder: OutlineInputBorder(
